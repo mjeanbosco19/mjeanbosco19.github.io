@@ -5,18 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi 👋, I am Jean Bosco Mugiraneza ☺</title>
+    <title>Hi 👋, I am Jean Bosco Mugiraneza 😊 </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body class="my-brand">
 
     <header>
         <!-- Mobile Menu -->
-        <div class="menu-mobile">
-            <div class="mobile-panel">
-            </div>
-            <div class="mobile-sidebar">
+        <div class="menu-mobile collapsible">
+            <!-- <div class="mobile-panel">
+            </div> -->
+            <div class="mobile-sidebar collapsible__content">
+
                 <div>
                     <button class="close-panel">
                         <img class="close-icon" src="/icons/close.svg" alt="">
@@ -141,9 +145,19 @@
         <section class="main-contents">
 
             <div class="myself">
+                <h2 class="my-career">Hello 👋, My name is</h2>
                 <h1 class="my-name">Jean Bosco Mugiraneza</h1>
-                <h2 class="my-career">Software Developer</h2>
+
+                <div class="slider-wrapper">
+                    I am
+                    <div class="slider">
+                        <div class="slider-text">UI & UX Designer</div>
+                        <div class="slider-text">Software Developer</div>
+                        <div class="slider-text">IT Specialist</div>
+                    </div>
+                </div>
             </div>
+
             <div class="prev-next">
                 <a href="/index.html">
                     <span class="icon-container">
@@ -178,6 +192,11 @@
 
         </aside>
     </main>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
