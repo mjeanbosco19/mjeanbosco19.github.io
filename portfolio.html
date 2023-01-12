@@ -14,12 +14,12 @@
 
     <header>
         <!-- Mobile Menu -->
-        <div class="menu-mobile collapsible">
-            <!-- <div class="mobile-panel">
-            </div> -->
-            <div class="mobile-sidebar collapsible__content">
+        <div id="mobileMenu" class="menu-mobile">
+            <div class="mobile-panel">
+            </div>
+            <div class="mobile-sidebar">
                 <div>
-                    <button class="close-panel">
+                    <button class="close-panel" onclick="closeMobileMenu()">
                         <img class="close-icon" src="/icons/close.svg" alt="">
                     </button>
                 </div>
@@ -57,7 +57,22 @@
 
 
                 </div>
+                <aside class="profile-menu">
+                    <div class="profile-menu-content">
+                        <img class="profile-photo" src="/images/me.jpg" alt="">
+                        <h1 class="profile-menu-name">Jean Bosco Mugiraneza</h1>
+                        <span class="social-icons">
+                            <img class="profile-social" src="/icons/linkedin.svg" alt="">
+                            <img class="profile-social" src="/icons/twitter.svg" alt="">
+                            <img class="profile-social" src="/icons/github.svg" alt="">
+                        </span>
+                        <a href="/resume.html"><button class="downloadcv btn btn--primary">Download CV</button></a>
+                        <a href="mailto:mjeanbosco19@gmail.com">
+                            <button class="sayhello btn btn--secondary">Say Hello 👋</button>
+                        </a>
+                    </div>
 
+                </aside>
             </div>
 
         </div>
@@ -69,7 +84,7 @@
           <img class="phone-logo" src="#my logo" alt="My Logo">
         </div> -->
                 <div>
-                    <button type="button" class="open-mobile-menu" onclick="openMenu()">
+                    <button type="button" class="open-mobile-menu" onclick="openMobileMenu()">
                         <span class="sr-only">Open sidebar</span>
                         <svg class="open-menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" aria-hidden="true">

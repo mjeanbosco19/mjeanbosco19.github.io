@@ -14,12 +14,12 @@
 
     <header>
         <!-- Mobile Menu -->
-        <div class="menu-mobile collapsible">
+        <div id="mobileMenu" class="menu-mobile">
             <div class="mobile-panel">
             </div>
-            <div class="mobile-sidebar collapsible__content">
+            <div class="mobile-sidebar">
                 <div>
-                    <button class="close-panel">
+                    <button class="close-panel" onclick="closeMobileMenu()">
                         <img class="close-icon" src="/icons/close.svg" alt="">
                     </button>
                 </div>
@@ -57,7 +57,22 @@
 
 
                 </div>
+                <aside class="profile-menu">
+                    <div class="profile-menu-content">
+                        <img class="profile-photo" src="/images/me.jpg" alt="">
+                        <h1 class="profile-menu-name">Jean Bosco Mugiraneza</h1>
+                        <span class="social-icons">
+                            <img class="profile-social" src="/icons/linkedin.svg" alt="">
+                            <img class="profile-social" src="/icons/twitter.svg" alt="">
+                            <img class="profile-social" src="/icons/github.svg" alt="">
+                        </span>
+                        <a href="/resume.html"><button class="downloadcv btn btn--primary">Download CV</button></a>
+                        <a href="mailto:mjeanbosco19@gmail.com">
+                            <button class="sayhello btn btn--secondary">Say Hello 👋</button>
+                        </a>
+                    </div>
 
+                </aside>
             </div>
 
         </div>
@@ -69,7 +84,7 @@
           <img class="phone-logo" src="#my logo" alt="My Logo">
         </div> -->
                 <div>
-                    <button type="button" class="open-mobile-menu" onclick="openMenu()">
+                    <button type="button" class="open-mobile-menu" onclick="openMobileMenu()">
                         <span class="sr-only">Open sidebar</span>
                         <svg class="open-menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" aria-hidden="true">
@@ -143,7 +158,7 @@
             <section class="main-contents">
                 <h2 class="page-title">Contact Me</h2>
                 <div>
-                    <div class="contact">
+                    <div class="grid grid--1x3">
                         <div class="contact-item">
 
                             <span class="icon-container">
@@ -166,14 +181,8 @@
                             <p class="contact-info">0788 780 375</p>
                         </div>
                     </div>
-                    <div class="reach-me">
-                        <div class="map">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.44353068508!2d30.10308881410475!3d-1.9769477373254996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca70506a774cb%3A0xcf2e60af40b8b987!2sETITE%20Ltd%20-%20Technology%20Company!5e0!3m2!1sen!2srw!4v1671756318826!5m2!1sen!2srw"
-                                width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class=" reach-me grid grid--1x2">
 
-                        </div>
                         <div class="message">
                             <span for="message" class="message-title">Get in Touch</span>
                             <div>
@@ -190,6 +199,13 @@
 
                                 <button class="btn btn--primary">Send a message</button>
                             </div>
+
+                        </div>
+                        <div class="map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.44353068508!2d30.10308881410475!3d-1.9769477373254996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca70506a774cb%3A0xcf2e60af40b8b987!2sETITE%20Ltd%20-%20Technology%20Company!5e0!3m2!1sen!2srw!4v1671756318826!5m2!1sen!2srw"
+                                width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                         </div>
 

@@ -1,6 +1,8 @@
-const collapsibles = document.querySelectorAll(".collapsible");
-collapsibles.forEach((item) =>
-  item.addEventListener("click", function () {
-    this.classList.toggle("collapsible--expanded");
-  })
-);
+
+function openMobileMenu() {
+    document.getElementById("mobileMenu").style.display = "block";
+    
+  }
+  function closeMobileMenu() {
+    document.getElementById("mobileMenu").style.display = "none";
+  }

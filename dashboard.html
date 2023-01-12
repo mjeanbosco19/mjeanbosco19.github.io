@@ -14,12 +14,12 @@
 
     <header>
         <!-- Mobile Menu -->
-        <div class="menu-mobile">
+        <div id="mobileMenu" class="menu-mobile">
             <div class="mobile-panel">
             </div>
             <div class="mobile-sidebar">
                 <div>
-                    <button class="close-panel">
+                    <button class="close-panel" onclick="closeMobileMenu()">
                         <img class="close-icon" src="/icons/close.svg" alt="">
                     </button>
                 </div>
@@ -69,7 +69,7 @@
           <img class="phone-logo" src="#my logo" alt="My Logo">
         </div> -->
                 <div>
-                    <button type="button" class="open-mobile-menu" onclick="openMenu()">
+                    <button type="button" class="open-mobile-menu" onclick="openMobileMenu()">
                         <span class="sr-only">Open sidebar</span>
                         <svg class="open-menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" aria-hidden="true">
