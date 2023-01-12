@@ -13,6 +13,24 @@
 <body class="my-brand">
 
     <header>
+        <!-- Mobile top navigation -->
+        <div class="mobile-top">
+            <div class="mobile-header">
+                <!-- <div>
+                          <img class="phone-logo" src="#my logo" alt="My Logo">
+                        </div> -->
+                <div>
+                    <button type="button" class="open-mobile-menu" onclick="openMobileMenu()">
+                        <span class="sr-only">Open sidebar</span>
+                        <svg class="open-menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
         <!-- Mobile Menu -->
         <div id="mobileMenu" class="menu-mobile">
             <div class="mobile-panel">
@@ -53,6 +71,9 @@
                             <img class="menu-mobile-icon" src="/icons/email.svg" alt="">
                             Contact Me
                         </a>
+                        <a href="/login.html" class="menu-mobile-item">
+                            <img class="menu-mobile-icon" src="/icons/lock.svg" alt="" />
+                            Login </a>
                     </div>
 
 
@@ -77,24 +98,7 @@
 
         </div>
 
-        <!-- Mobile top navigation -->
-        <div class="mobile-top">
-            <div class="mobile-header">
-                <!-- <div>
-          <img class="phone-logo" src="#my logo" alt="My Logo">
-        </div> -->
-                <div>
-                    <button type="button" class="open-mobile-menu" onclick="openMobileMenu()">
-                        <span class="sr-only">Open sidebar</span>
-                        <svg class="open-menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
+
 
         <!-- Desktop Menu -->
         <div class="menu-desktop">
@@ -140,8 +144,10 @@
                                 alt="Home" /></span>
                         <span>Contact</span>
                     </a>
-                    <a href="/login.html" class="icon-container login-icon">
-                        <img class="icon--menu icon--primary" src="/icons/lock.svg" alt="">
+                    <a href="/login.html" class="menu-items">
+                        <span class="icon-container"><img class="icon--menu icon--primary" src="/icons/lock.svg"
+                                alt="Home" /></span>
+                        <span>Login</span>
                     </a>
 
                 </div>
@@ -219,6 +225,32 @@
         </div>
     </main>
     <script src="js/main.js"></script>
+
+    <script>
+        (function (w, d, s, u) {
+            w.gbwawc = {
+                url: u,
+                options: {
+                    waId: "+250 0733780375",
+                    siteName: "Jean Bosco MUGIRANEZA",
+                    siteTag: "Online",
+                    siteLogo: "https://www.yegogate.com/wp-content/uploads/2022/08/yegogate.png",
+                    widgetPosition: "LEFT",
+                    triggerMessage: "I always happy to help 😊, Let\'s talk! ",
+                    welcomeMessage: "Hi 👋, Nice to meet you 🥰!",
+                    brandColor: "#25D366",
+                    messageText: "How can I help today?",
+                    replyOptions: ['UI &UX Design', 'Website Development', 'Mobile App', 'I\' am just browsing'],
+                },
+            };
+            var h = d.getElementsByTagName(s)[0],
+                j = d.createElement(s);
+            j.async = true;
+            j.src = u + "/whatsapp-widget.min.js?_=" + Math.random();
+            h.parentNode.insertBefore(j, h);
+        })(window, document, "script", "https://waw.gallabox.com");
+    </script>
+
 </body>
 
 </html>

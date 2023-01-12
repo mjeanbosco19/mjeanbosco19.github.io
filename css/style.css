@@ -298,6 +298,7 @@ video {
     width: 100%;
     height: 100vh;
     max-width: 20rem;
+    overflow-y: scroll;
     flex: 1 1 0%;
     flex-direction: column;
     --tw-bg-opacity: 1;
@@ -392,13 +393,14 @@ video {
 .mobile-header {
     display: flex;
     align-items: center;
-    /* flex-direction: column; */
+    flex-direction: column;
+    position: absolute;
     justify-content: space-between;
     background-color: rgb(79 70 229 / var(--tw-bg-opacity));
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    /* padding-left: 1rem;
-    padding-right: 1rem; */
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 /* @media (min-width: 640px) {
