@@ -272,7 +272,7 @@ video {
     bottom: 0px;
     left: 0px;
     z-index: 40;
-    display: flex;
+    display: none;
 }
 
 @media (min-width: 1024px) {
