@@ -160,84 +160,101 @@
 
 
         <section class="main-contents">
-            <h2 class="page-title">My Work</h2>
-
-            <div class="portfolio">
-                <div>
-                    <h3 class="portfolio-heading">Filter</h3>
-                    <div class="portfolio-filter">
-                        <nav class="filter-items">
-
-                            <a href="#" class="filter-all" aria-current="page"> All </a>
-
-                            <a href="#" class="filter-item">
-                                Popular </a>
-                            <a href="#" class="filter-item">
-                                Latest </a>
-                            <a href="#" class="filter-item">
-                                Others </a>
-                        </nav>
-                    </div>
+            <h2 class="page-title">Proud projects that make me stand out</h2>
+            <div>
+                <div id="myBtnContainer" class="grid filterBtns">
+                    <button class="btn btn--outline" onclick="filterSelection('all')"> ALL</button>
+                    <button class="btn btn--outline" onclick="filterSelection('design')"> Design</button>
+                    <button class="btn btn--outline" onclick="filterSelection('web')">Web</button>
+                    <button class="btn btn--outline" onclick="filterSelection('app')"> App</button>
+                    <button class="btn btn--outline" onclick="filterSelection('itservices')"> IT</button>
+                    <button class="btn btn--outline" onclick="filterSelection('awards')">Awards</button>
                 </div>
             </div>
 
-            <ul class="gallery">
-                <li class="relative">
-                    <div class="gallery-item">
-                        <img src="/images/me.jpg" alt="" class="gallery-image">
+            <section class="block container">
+                <header class="block__header">
+                    <h2 class="block__heading">Featured Services</h2>
+                    <p>
+                        Grow Your Business by
+                        Developing Your Software or a Website with Us.
+                    </p>
+                </header>
+                <article class="grid grid--1x2 feature">
+                    <div class="feature__content" data-aos="fade-right">
+                        <span class="icon-container">
+                            <svg class="icon icon--primary">
+                                <use href="images/sprite.svg#easy"></use>
+                            </svg>
+                        </span>
+                        <h3 class="feature__heading">UI & UX Design</h3>
+                        <p>
+                            "Good design is good business."
+                            The success of every digital product company is measured by its user interface (UI) and user
+                            experience (UX) design. The
+                            digital product we created must assist users in achieving their objectives by delivering a
+                            delightful user experience
+                            through human-centered design solutions.
 
+                        </p>
+                        <a href="#" target="_blank" class="link-arrow">Learn More</a>
                     </div>
-
-                </li>
-
-                <li class="relative">
-                    <div class="gallery-item">
-                        <img src="/images/me.jpg" alt="" class="gallery-image">
-
+                    <img src="images/design.png" alt="">
+                </article>
+                <article class="grid grid--1x2 feature">
+                    <div class="feature__content" data-aos="fade-up">
+                        <span class="icon-container">
+                            <svg class="icon icon--primary">
+                                <use href="images/sprite.svg#computer"></use>
+                            </svg>
+                        </span>
+                        <h3 class="feature__heading">Simply Fast Websites</h3>
+                        <p>
+                            Choosing the right software development company in order to have your dreams achieved and
+                            success for your internet
+                            product can be a difficult task. Here we make sure that you have made the best decision for
+                            your project to start with
+                            and shape the product as you imagine. Because we make it simple.
+                        </p>
+                        <a href="#" target="_blank" class="link-arrow">Learn More</a>
                     </div>
-
-                </li>
-                <li class="relative">
-                    <div class="gallery-item">
-                        <img src="/images/me.jpg" alt="" class="gallery-image">
-
+                    <img src="images/banner.png" alt="">
+                </article>
+                <article class="grid grid--1x2 feature">
+                    <div class="feature__content" data-aos="fade-up">
+                        <span class="icon-container">
+                            <svg class="icon icon--primary">
+                                <use href="images/sprite.svg#wordpress"></use>
+                            </svg>
+                        </span>
+                        <h3 class="feature__heading">Wordpress Made Easy</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+                            obcaecati vel ad unde est illo at. Labore excepturi officia dolores! Lorem ipsum dolor sit
+                            amet consectetur adipisicing elit. Quam
+                            obcaecati vel ad unde est illo at. Labore excepturi officia dolores!
+                        </p>
+                        <a href="#" target="_blank" class="link-arrow">Learn More</a>
                     </div>
-
-                </li>
-
-                <li class="relative">
-                    <div class="gallery-item">
-                        <img src="/images/me.jpg" alt="" class="gallery-image">
-
+                    <img src="images/wordpress.jpg" alt="">
+                </article>
+                <article class="grid grid--1x2 feature">
+                    <div class="feature__content" data-aos="fade-left">
+                        <span class="icon-container">
+                            <svg class="icon icon--primary">
+                                <use href="images/sprite.svg#clock"></use>
+                            </svg>
+                        </span>
+                        <h3 class="feature__heading">24/7 Expert Support</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+                            obcaecati vel ad unde est illo at. Labore excepturi officia dolores!
+                        </p>
+                        <a href="#" target="_blank" class="link-arrow">Learn More</a>
                     </div>
-
-                </li>
-                <li class="relative">
-                    <div class="gallery-item">
-                        <img src="/images/me.jpg" alt="" class="gallery-image">
-
-                    </div>
-
-                </li>
-                <li class="relative">
-                    <div class="gallery-item">
-                        <img src="/images/me.jpg" alt="" class="gallery-image">
-
-                    </div>
-
-                </li>
-                <li class="relative">
-                    <div class="gallery-item">
-                        <img src="/images/me.jpg" alt="" class="gallery-image">
-
-                    </div>
-
-                </li>
-
-
-
-                <!-- More images... -->
-            </ul>
+                    <img src="images/support.jpg" alt="">
+                </article>
+            </section>
 
             <div class="prev-next">
                 <a href="/resume.html">
