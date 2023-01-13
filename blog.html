@@ -160,14 +160,37 @@
     <main class="main-section">
 
         <section class="main-contents">
-            <section class="main-contents">
+
+            <section data-aos="zoom-in-up" class=" block container block-domain">
                 <h2 class="page-title">Blogs</h2>
+                <div class="input-group"> <input aria-label="Domain" type="text" class="input"
+                        placeholder="Enter text here to search..." /> <button
+                        class="btn btn--primary btn--learnmore btn--search">
+                        <svg class="icon icon--white">
+                            <use href="images/sprite.svg#search"></use>
+                        </svg>
+                        Search </button> </div>
+                <div>
+                    <div id="myBtnContainer" class="filterBtns">
+                        <button class="btn btn--outline btn--stretched" onclick="filterSelection('all')"> ALL</button>
+                        <button class="btn btn--outline btn--stretched" onclick="filterSelection('design')">
+                            Design</button>
+                        <button class="btn btn--outline btn--stretched" onclick="filterSelection('web')">Web</button>
+                        <button class="btn btn--outline btn--stretched" onclick="filterSelection('tech')"> Tech</button>
+                        <button class="btn btn--outline btn--stretched" onclick="filterSelection('news')">
+                            News</button>
+                        <button class="btn btn--outline btn--stretched"
+                            onclick="filterSelection('others')">Others</button>
+                    </div>
+                </div>
+            </section>
+            <section>
                 <ul class="blog">
-                    <li class="relative">
+                    <li class="relative filterDiv design">
                         <div class="blog-item">
                             <a href="/article.html">
-                                <img src="/images/blog.webp" alt="" class="blog-image">
-                                <p class="blog-title">This a Blog Title</p>
+                                <img src="/images/musicapp.jpg" alt="" class="blog-image">
+                                <p class="blog-title">Music is the universal language of mankind.</p>
                             </a>
                             <span class="blog-icons">
                                 <img class="blog-icon" src="/icons/like.svg" alt="">
@@ -179,11 +202,11 @@
 
                     </li>
 
-                    <li class="relative">
+                    <li class="relative filterDiv tech">
                         <div class="blog-item">
                             <a href="/article.html">
-                                <img src="/images/blog.webp" alt="" class="blog-image">
-                                <p class="blog-title">This a Blog Title</p>
+                                <img src="/images/pic.jpg" alt="" class="blog-image">
+                                <p class="blog-title">Technology transforming lives</p>
                             </a>
                             <span class="blog-icons">
                                 <img class="blog-icon" src="/icons/like.svg" alt="">
@@ -194,11 +217,11 @@
                         </div>
 
                     </li>
-                    <li class="relative">
+                    <li class="relative filterDiv news">
                         <div class="blog-item">
                             <a href="/article.html">
-                                <img src="/images/blog.webp" alt="" class="blog-image">
-                                <p class="blog-title">This a Blog Title</p>
+                                <img src="/images/world.jpg" alt="" class="blog-image">
+                                <p class="blog-title">Global warming is global warning</p>
                             </a>
                             <span class="blog-icons">
                                 <img class="blog-icon" src="/icons/like.svg" alt="">
@@ -209,11 +232,11 @@
                         </div>
 
                     </li>
-                    <li class="relative">
+                    <li class="relative filterDiv web">
                         <div class="blog-item">
                             <a href="/article.html">
-                                <img src="/images/blog.webp" alt="" class="blog-image">
-                                <p class="blog-title">This a Blog Title</p>
+                                <img src="/images/blog.jpg" alt="" class="blog-image">
+                                <p class="blog-title">If at first you don’t succeed; call it version 1.0</p>
                             </a>
                             <span class="blog-icons">
                                 <img class="blog-icon" src="/icons/like.svg" alt="">
@@ -224,11 +247,11 @@
                         </div>
 
                     </li>
-                    <li class="relative">
+                    <li class="relative filterDiv tech">
                         <div class="blog-item">
                             <a href="/article.html">
-                                <img src="/images/blog.webp" alt="" class="blog-image">
-                                <p class="blog-title">This a Blog Title</p>
+                                <img src="/images/software.png" alt="" class="blog-image">
+                                <p class="blog-title">What you need to know about a software</p>
                             </a>
                             <span class="blog-icons">
                                 <img class="blog-icon" src="/icons/like.svg" alt="">
@@ -239,11 +262,11 @@
                         </div>
 
                     </li>
-                    <li class="relative">
+                    <li class="relative filterDiv web">
                         <div class="blog-item">
                             <a href="/article.html">
-                                <img src="/images/blog.webp" alt="" class="blog-image">
-                                <p class="blog-title">This a Blog Title</p>
+                                <img src="/images/kalkashop.jpg" alt="" class="blog-image">
+                                <p class="blog-title">Guess what? eBay has defined e-commerce.</p>
                             </a>
                             <span class="blog-icons">
                                 <img class="blog-icon" src="/icons/like.svg" alt="">
@@ -254,11 +277,11 @@
                         </div>
 
                     </li>
-                    <li class="relative">
+                    <li class="relative filterDiv others">
                         <div class="blog-item">
                             <a href="/article.html">
-                                <img src="/images/blog.webp" alt="" class="blog-image">
-                                <p class="blog-title">This a Blog Title</p>
+                                <img src="/images/ritcostock.jpg" alt="" class="blog-image">
+                                <p class="blog-title">Good design is a good business.</p>
                             </a>
                             <span class="blog-icons">
                                 <img class="blog-icon" src="/icons/like.svg" alt="">
@@ -269,11 +292,13 @@
                         </div>
 
                     </li>
-                    <li class="relative">
+                    <li class="relative filterDiv others">
                         <div class="blog-item">
                             <a href="/article.html">
-                                <img src="/images/blog.webp" alt="" class="blog-image">
-                                <p class="blog-title">This a Blog Title</p>
+                                <img src="/images/etitexyz.jpg" alt="" class="blog-image">
+                                <p class="blog-title">ASRH information through smart classes
+
+                                </p>
                             </a>
                             <span class="blog-icons">
                                 <img class="blog-icon" src="/icons/like.svg" alt="">
@@ -284,11 +309,11 @@
                         </div>
 
                     </li>
-                    <li class="relative">
+                    <li class="relative filterDiv others">
                         <div class="blog-item">
                             <a href="/article.html">
-                                <img src="/images/blog.webp" alt="" class="blog-image">
-                                <p class="blog-title">This a Blog Title</p>
+                                <img src="/images/sms.jpg" alt="" class="blog-image">
+                                <p class="blog-title">ETITE School Management System</p>
                             </a>
                             <span class="blog-icons">
                                 <img class="blog-icon" src="/icons/like.svg" alt="">

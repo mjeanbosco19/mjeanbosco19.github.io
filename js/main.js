@@ -8,6 +8,7 @@ function openMobileMenu() {
   }
 
 
+  
     // Gallery Js
     filterSelection("all")
     function filterSelection(c) {
