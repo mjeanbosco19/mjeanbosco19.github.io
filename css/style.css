@@ -672,6 +672,9 @@ video {
     position: absolute;
 }
 
+.btn--learnmore {
+display: inline-block;
+}
 
 .btn--block {
     width: 100%;
