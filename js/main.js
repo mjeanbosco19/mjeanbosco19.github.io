@@ -41,15 +41,13 @@ function openMobileMenu() {
       }
       element.className = arr1.join(" ");
     }
-
-    // Add active class to the current button (highlight it)
-    let btnContainer = document.getElementById("myBtnContainer");
-    let btns = btnContainer.getElementsByClassName("button");
-    for (let i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function () {
-        let current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-      });
-    }
+// 1. Contact Form Start Here
+function openAddBlog() {
+    document.getElementById("blogForm").style.display = "block";
+    
+  }
+  function closeAddBlog() {
+    document.getElementById("blogForm").style.display = "none";
+  }
   
+    

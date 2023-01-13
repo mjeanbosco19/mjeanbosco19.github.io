@@ -998,7 +998,7 @@ video {
     padding-left: 1rem;
     padding-right: 1rem;
     width: 500px;
-    box-shadow: #000;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .my-form {
@@ -1099,6 +1099,7 @@ video {
     border-color: transparent;
     background-color: #0478d9;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
@@ -1120,7 +1121,7 @@ video {
     padding: 2px 16px 2px 42px;
     border: none;
     border-radius: 3px;
-    box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     color: #757575;
     font-size: 14px;
     font-weight: 500;
@@ -1989,6 +1990,11 @@ video {
     padding-bottom: 1rem;
 }
 
+.dashitem {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+
 .dashboard-menu-item {
     display: flex;
     align-items: center;
@@ -1997,7 +2003,7 @@ video {
     padding-right: 0.5rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    font-size: 0.875rem;
+    font-size: 1.2rem;
     line-height: 1.25rem;
     font-weight: 500;
     color: rgb(209 213 219);
@@ -2024,6 +2030,7 @@ video {
 .dashboard-header {
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 @media (min-width: 768px) {
@@ -2040,7 +2047,7 @@ video {
     height: 4rem;
     flex-shrink: 0;
     background-color: #fff;
-    box-shadow: #000;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .dash-header {
@@ -2121,7 +2128,7 @@ video {
 
 @media (min-width: 640px) {
     .dash-search-field {
-        font-size: 0.875rem;
+        font-size: 1.2rem;
         line-height: 1.25rem;
     }
 }
@@ -2171,7 +2178,7 @@ video {
     background-color: #fff;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
-    box-shadow: #000;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .dash-profile-item {
@@ -2226,6 +2233,7 @@ video {
     max-width: 80rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    overflow-x: hidden;
 }
 
 @media (min-width: 640px) {
@@ -2241,3 +2249,10 @@ video {
         padding-right: 2rem;
     }
 }
+
+.add-blog {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+

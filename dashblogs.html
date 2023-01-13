@@ -88,44 +88,45 @@
                 <div class="dashboard-menu">
                     <nav class="dash-menu">
                         <a href="/dashboard.html" class="dashboard-menu-item">
-                            <img class="dashboard-menu-icon" src="/icons/home.svg" alt="">
+                            <span class="icon-container"><img class="icon--menu icon--primary" src="/icons/home.svg"
+                                    alt=""></span>
 
-                            Dashboard
+                            <span class="dashitem">Dashboard</span>
                         </a>
 
                         <a href="/dashblogs.html" class="dashboard-menu-item">
-                            <img class="dashboard-menu-icon" src="/icons/home.svg" alt="">
-
-                            My Blogs
+                            <span class="icon-container"><img class="icon--menu icon--primary" src="/icons/add.svg"
+                                    alt=""></span>
+                            <span class="dashitem">My Blogs</span>
                         </a>
 
                         <a href="#" class="dashboard-menu-item">
-                            <img class="dashboard-menu-icon" src="/icons/home.svg" alt="">
-
-                            Comments
+                            <span class="icon-container"><img class="icon--menu icon--primary" src="/icons/comment.svg"
+                                    alt=""></span>
+                            <span class="dashitem">Comments</span>
                         </a>
 
                         <a href="#" class="dashboard-menu-item">
-                            <img class="dashboard-menu-icon" src="/icons/home.svg" alt="">
-
-                            Users
+                            <span class="icon-container"><img class="icon--menu icon--primary" src="/icons/user.svg"
+                                    alt=""></span>
+                            <span class="dashitem">Users</span>
                         </a>
 
                         <a href="#" class="dashboard-menu-item">
-                            <img class="dashboard-menu-icon" src="/icons/home.svg" alt="">
-
-                            Pages
+                            <span class="icon-container"><img class="icon--menu icon--primary" src="/icons/report.svg"
+                                    alt=""></span>
+                            <span class="dashitem">Pages</span>
                         </a>
 
                         <a href="#" class="dashboard-menu-item">
-                            <img class="dashboard-menu-icon" src="/icons/home.svg" alt="">
-
-                            Settings
+                            <span class="icon-container"><img class="icon--menu icon--primary" src="/icons/setting.svg"
+                                    alt=""></span>
+                            <span class="dashitem">Settings</span>
                         </a>
                         <a href="/index.html" class="dashboard-menu-item">
-                            <img class="dashboard-menu-icon" src="/icons/home.svg" alt="">
-
-                            Log out
+                            <span class="icon-container"><img class="icon--menu icon--primary" src="/icons/logout.svg"
+                                    alt=""></span>
+                            <span class="dashitem">Log out</span>
                         </a>
                     </nav>
                 </div>
@@ -196,7 +197,7 @@
             </div>
 
             <main class="dash-main">
-                
+
                 <div>
                     <div class="dashboard-main">
                         <h1 class="dash-title">Dashboard</h1>
@@ -204,141 +205,172 @@
                     <div class="dash-contents">
                         <!-- my contents -->
                         <h2 class="page-title">Update Blogs</h2>
-                        <a href="#"><button class="btn btn--primary">Add a Blog</button></a>
+                    </div>
+
+                    <section data-aos="zoom-in-up" class=" block container block-domain">
+
+                        <div>
+                            <div id="myBtnContainer" class="filterBtns">
+                                <button class="btn btn--outline btn--stretched" onclick="filterSelection('all')">
+                                    ALL</button>
+                                <button class="btn btn--outline btn--stretched" onclick="filterSelection('design')">
+                                    Design</button>
+                                <button class="btn btn--outline btn--stretched"
+                                    onclick="filterSelection('web')">Web</button>
+                                <button class="btn btn--outline btn--stretched" onclick="filterSelection('tech')">
+                                    Tech</button>
+                                <button class="btn btn--outline btn--stretched" onclick="filterSelection('news')">
+                                    News</button>
+                                <button class="btn btn--outline btn--stretched"
+                                    onclick="filterSelection('others')">Others</button>
+                            </div>
                         </div>
+                    </section>
+                    <section>
                         <ul class="blog">
-                            <li class="relative">
+                            <li class="relative filterDiv design">
                                 <div class="blog-item">
                                     <a href="/article.html">
-                                        <img src="/images/blog.webp" alt="" class="blog-image">
-                                        <p class="blog-title">This a Blog Title</p>
+                                        <img src="/images/musicapp.jpg" alt="" class="blog-image">
+                                        <p class="blog-title">Music is the universal language of mankind.</p>
                                     </a>
                                     <span class="blog-icons">
                                         <img class="blog-icon" src="/icons/view.svg" alt="">
                                         <img class="blog-icon" src="/icons/edit.png" alt="">
                                         <img class="blog-icon" src="/icons/delete.svg" alt="">
                                     </span>
+
 
                                 </div>
 
                             </li>
 
-                            <li class="relative">
+                            <li class="relative filterDiv tech">
                                 <div class="blog-item">
                                     <a href="/article.html">
-                                        <img src="/images/blog.webp" alt="" class="blog-image">
-                                        <p class="blog-title">This a Blog Title</p>
+                                        <img src="/images/pic.jpg" alt="" class="blog-image">
+                                        <p class="blog-title">Technology transforming lives</p>
                                     </a>
                                     <span class="blog-icons">
                                         <img class="blog-icon" src="/icons/view.svg" alt="">
                                         <img class="blog-icon" src="/icons/edit.png" alt="">
                                         <img class="blog-icon" src="/icons/delete.svg" alt="">
                                     </span>
+
 
                                 </div>
 
                             </li>
-                            <li class="relative">
+                            <li class="relative filterDiv news">
                                 <div class="blog-item">
                                     <a href="/article.html">
-                                        <img src="/images/blog.webp" alt="" class="blog-image">
-                                        <p class="blog-title">This a Blog Title</p>
+                                        <img src="/images/world.jpg" alt="" class="blog-image">
+                                        <p class="blog-title">Global warming is global warning</p>
                                     </a>
                                     <span class="blog-icons">
                                         <img class="blog-icon" src="/icons/view.svg" alt="">
                                         <img class="blog-icon" src="/icons/edit.png" alt="">
                                         <img class="blog-icon" src="/icons/delete.svg" alt="">
                                     </span>
+
 
                                 </div>
 
                             </li>
-                            <li class="relative">
+                            <li class="relative filterDiv web">
                                 <div class="blog-item">
                                     <a href="/article.html">
-                                        <img src="/images/blog.webp" alt="" class="blog-image">
-                                        <p class="blog-title">This a Blog Title</p>
+                                        <img src="/images/blog.jpg" alt="" class="blog-image">
+                                        <p class="blog-title">If at first you don’t succeed; call it version 1.0</p>
                                     </a>
                                     <span class="blog-icons">
                                         <img class="blog-icon" src="/icons/view.svg" alt="">
                                         <img class="blog-icon" src="/icons/edit.png" alt="">
                                         <img class="blog-icon" src="/icons/delete.svg" alt="">
                                     </span>
+
 
                                 </div>
 
                             </li>
-                            <li class="relative">
+                            <li class="relative filterDiv tech">
                                 <div class="blog-item">
                                     <a href="/article.html">
-                                        <img src="/images/blog.webp" alt="" class="blog-image">
-                                        <p class="blog-title">This a Blog Title</p>
+                                        <img src="/images/software.png" alt="" class="blog-image">
+                                        <p class="blog-title">What you need to know about a software</p>
                                     </a>
                                     <span class="blog-icons">
                                         <img class="blog-icon" src="/icons/view.svg" alt="">
                                         <img class="blog-icon" src="/icons/edit.png" alt="">
                                         <img class="blog-icon" src="/icons/delete.svg" alt="">
                                     </span>
+
 
                                 </div>
 
                             </li>
-                            <li class="relative">
+                            <li class="relative filterDiv web">
                                 <div class="blog-item">
                                     <a href="/article.html">
-                                        <img src="/images/blog.webp" alt="" class="blog-image">
-                                        <p class="blog-title">This a Blog Title</p>
+                                        <img src="/images/kalkashop.jpg" alt="" class="blog-image">
+                                        <p class="blog-title">Guess what? eBay has defined e-commerce.</p>
                                     </a>
                                     <span class="blog-icons">
                                         <img class="blog-icon" src="/icons/view.svg" alt="">
                                         <img class="blog-icon" src="/icons/edit.png" alt="">
                                         <img class="blog-icon" src="/icons/delete.svg" alt="">
                                     </span>
+
 
                                 </div>
 
                             </li>
-                            <li class="relative">
+                            <li class="relative filterDiv others">
                                 <div class="blog-item">
                                     <a href="/article.html">
-                                        <img src="/images/blog.webp" alt="" class="blog-image">
-                                        <p class="blog-title">This a Blog Title</p>
+                                        <img src="/images/ritcostock.jpg" alt="" class="blog-image">
+                                        <p class="blog-title">Good design is a good business.</p>
                                     </a>
                                     <span class="blog-icons">
                                         <img class="blog-icon" src="/icons/view.svg" alt="">
                                         <img class="blog-icon" src="/icons/edit.png" alt="">
                                         <img class="blog-icon" src="/icons/delete.svg" alt="">
                                     </span>
+
 
                                 </div>
 
                             </li>
-                            <li class="relative">
+                            <li class="relative filterDiv others">
                                 <div class="blog-item">
                                     <a href="/article.html">
-                                        <img src="/images/blog.webp" alt="" class="blog-image">
-                                        <p class="blog-title">This a Blog Title</p>
+                                        <img src="/images/etitexyz.jpg" alt="" class="blog-image">
+                                        <p class="blog-title">ASRH information through smart classes
+
+                                        </p>
                                     </a>
                                     <span class="blog-icons">
                                         <img class="blog-icon" src="/icons/view.svg" alt="">
                                         <img class="blog-icon" src="/icons/edit.png" alt="">
                                         <img class="blog-icon" src="/icons/delete.svg" alt="">
                                     </span>
+
 
                                 </div>
 
                             </li>
-                            <li class="relative">
+                            <li class="relative filterDiv others">
                                 <div class="blog-item">
                                     <a href="/article.html">
-                                        <img src="/images/blog.webp" alt="" class="blog-image">
-                                        <p class="blog-title">This a Blog Title</p>
+                                        <img src="/images/sms.jpg" alt="" class="blog-image">
+                                        <p class="blog-title">ETITE School Management System</p>
                                     </a>
                                     <span class="blog-icons">
                                         <img class="blog-icon" src="/icons/view.svg" alt="">
                                         <img class="blog-icon" src="/icons/edit.png" alt="">
                                         <img class="blog-icon" src="/icons/delete.svg" alt="">
                                     </span>
+
 
                                 </div>
 
@@ -349,12 +381,18 @@
 
                             <!-- More images... -->
                         </ul>
-                        <!-- /End  -->
-                    </div>
+                    </section>
+
+
+
+                    <!-- More images... -->
+                    </ul>
+                    <!-- /End  -->
                 </div>
-                
-            </main>
         </div>
+
+        </main>
+    </div>
     </div>
     <script src="js/main.js"></script>
 </body>

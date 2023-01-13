@@ -88,44 +88,45 @@
                 <div class="dashboard-menu">
                     <nav class="dash-menu">
                         <a href="/dashboard.html" class="dashboard-menu-item">
-                            <img class="dashboard-menu-icon" src="/icons/home.svg" alt="">
+                            <span class="icon-container"><img class="icon--menu icon--primary" src="/icons/home.svg"
+                                    alt=""></span>
 
-                            Dashboard
+                            <span class="dashitem">Dashboard</span>
                         </a>
 
                         <a href="/dashblogs.html" class="dashboard-menu-item">
-                            <img class="dashboard-menu-icon" src="/icons/home.svg" alt="">
-
-                            My Blogs
+                            <span class="icon-container"><img class="icon--menu icon--primary" src="/icons/add.svg"
+                                    alt=""></span>
+                            <span class="dashitem">My Blogs</span>
                         </a>
 
                         <a href="#" class="dashboard-menu-item">
-                            <img class="dashboard-menu-icon" src="/icons/home.svg" alt="">
-
-                            Comments
+                            <span class="icon-container"><img class="icon--menu icon--primary" src="/icons/comment.svg"
+                                    alt=""></span>
+                            <span class="dashitem">Comments</span>
                         </a>
 
                         <a href="#" class="dashboard-menu-item">
-                            <img class="dashboard-menu-icon" src="/icons/home.svg" alt="">
-
-                            Users
+                            <span class="icon-container"><img class="icon--menu icon--primary" src="/icons/user.svg"
+                                    alt=""></span>
+                            <span class="dashitem">Users</span>
                         </a>
 
                         <a href="#" class="dashboard-menu-item">
-                            <img class="dashboard-menu-icon" src="/icons/home.svg" alt="">
-
-                            Pages
+                            <span class="icon-container"><img class="icon--menu icon--primary" src="/icons/report.svg"
+                                    alt=""></span>
+                            <span class="dashitem">Pages</span>
                         </a>
 
                         <a href="#" class="dashboard-menu-item">
-                            <img class="dashboard-menu-icon" src="/icons/home.svg" alt="">
-
-                            Settings
+                            <span class="icon-container"><img class="icon--menu icon--primary" src="/icons/setting.svg"
+                                    alt=""></span>
+                            <span class="dashitem">Settings</span>
                         </a>
                         <a href="/index.html" class="dashboard-menu-item">
-                            <img class="dashboard-menu-icon" src="/icons/home.svg" alt="">
-
-                            Log out
+                            <span class="icon-container"><img class="icon--menu icon--primary" src="/icons/logout.svg"
+                                    alt=""></span>
+                            <span class="dashitem">Log out</span>
                         </a>
                     </nav>
                 </div>
@@ -228,6 +229,28 @@
                                 <p class="contact-info">375</p>
                             </div>
                         </div>
+                        <div class="add-blog">
+                            <button class="btn btn--outline btn--stretched" onclick="openAddBlog()">Add new Blog</button>
+                        </div>
+
+                        <!-- Add blog Start Here -->
+                        <section id="blogForm">
+                            <form action="#">
+                            <label for="name"><b>Blog Title</b></label>
+                            <input class="message-input" type="text" id="name" placeholder="Enter blog title" name="name" minlength="4"
+                                maxlength="50" required>
+                            <label for="file"><b>Blog cover photo</b></label>
+                            <input class="message-input" type="file" id="file" placeholder="Attach image" name="file"  required>
+                            <label for="text"><b>Blog contents</b></label>
+                            <textarea rows="4" name="message" id="message" class="message-input"></textarea>
+                            <button type="submit" class="btn btn--primary btn--stretched">Add Blog</button>
+                        </form>
+                        
+                        <button type="button" class="btn btn--accent btn--stretched" onclick="closeAddBlog()">Close</button>
+                        </section>
+                        
+
+                    
                         <!-- /End  -->
                     </div>
                 </div>
