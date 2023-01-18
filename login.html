@@ -166,21 +166,25 @@
             </div>
             <div class="login-section">
                 <div class="login-form">
-                    <form class="my-form" action="dashboard.html" method="POST">
+                    <form class="my-form" action="dashboard.html" method="POST" onsubmit="return validateForm()">
                         <div>
-                            <label for="email" class="form-item"> Email or Username </label>
+                            <label for="username" class="form-item"> Email or Username </label>
                             <div class="login-input">
-                                <input id="email" name="email" type="email" autocomplete="email" required
+                                <input id="username" name="username" type="text" autocomplete="username"
                                     class="form-input">
                             </div>
+                            <div id="username-error" class="error-message"></div>
                         </div>
 
                         <div>
                             <label for="password" class="form-item"> Password </label>
                             <div class="login-input">
                                 <input id="password" name="password" type="password" autocomplete="current-password"
-                                    required class="form-input">
+                                    class="form-input">
+
                             </div>
+                            <div id="password-error" class="error-message"></div>
+
                         </div>
 
                         <div class="loginaddons">
@@ -194,18 +198,19 @@
                                     password?</a>
                             </div>
                         </div>
+                        <div>
+                            <a href="dashboard.html"><button type="submit" class="login-button">Login</button></a>
+                        </div>
                     </form>
-                    <div>
-                        <a href="dashboard.html"><button type="submit" class="login-button">Login</button></a>
-                    </div>
+
 
                     <button type="button" class="login-with-google">
                         Sign in with Google
                     </button>
 
-
-
                 </div>
+
+
             </div>
         </div>
         <div class="prev-next">

@@ -1147,6 +1147,28 @@ video {
         0 0 0 3px #c8dafc;
 }
 
+.error-message {
+    color: var(--color-accent);
+    font-size: 1rem;
+}
+
+/* Style the input fields when they are valid */
+input[type="text"].valid,
+input[type="password"].valid {
+    border-color: green;
+}
+
+/* Style the input fields when they are invalid */
+input[type="text"].invalid,
+input[type="password"].invalid {
+    border-color: red;
+}
+
+/* Style the password input field */
+input[type="password"] {
+    position: relative;
+    padding-right: 40px;
+}
 
 /* Blog Pages */
 
@@ -2256,3 +2278,11 @@ video {
     margin-top: 4rem;
 }
 
+.addblog-section {
+    max-width: 1024px;
+    margin: auto;
+}
+
+.dashcomment {
+    max-width: 30rem;
+}

@@ -100,7 +100,7 @@
                             <span class="dashitem">My Blogs</span>
                         </a>
 
-                        <a href="#" class="dashboard-menu-item">
+                        <a href="dashcomments.html" class="dashboard-menu-item">
                             <span class="icon-container"><img class="icon--menu icon--primary" src="/icons/comment.svg"
                                     alt=""></span>
                             <span class="dashitem">Comments</span>
@@ -207,38 +207,6 @@
                         <h2 class="page-title">Update Blogs</h2>
                     </div>
 
-                    <div class="add-blog">
-                        <button class="btn btn--primary btn--stretched" onclick="openAddBlog()">Add new
-                            Blog</button>
-                    </div>
-
-                    <!-- Add blog Start Here -->
-                    <section id="blogForm" class="addblog-section">
-                        <form action="#">
-                            <label for="name"><b>Blog Title</b></label>
-                            <input class="message-input" type="text" id="title" placeholder="Enter blog title"
-                                name="name" minlength="4" maxlength="50" >
-                            <label for="file"><b>Blog cover photo</b></label>
-                            <input class="message-input" type="file" id="cover-photo" placeholder="Attach image" name="file"
-                                >
-                            <label for="category"><b>Choose a category:</b></label>
-                            <select id="category" name="category" class="message-input">
-                                <option value="Design">Design</option>
-                                <option value="Web">Web</option>
-                                <option value="Tech">Tech</option>
-                                <option value="News">News</option>
-                                <option value="Others">Others</option>
-                            </select>
-                            <label for="text"><b>Blog contents</b></label>
-                            <textarea rows="4" name="message" id="description" class="message-input"></textarea>
-                            <button type="submit" class="btn btn--primary btn--stretched">Add Blog</button>
-                        </form>
-
-                        <button type="button" class="btn btn--accent btn--stretched"
-                            onclick="closeAddBlog()">Close</button>
-                    </section>
-
-
                     <section data-aos="zoom-in-up" class=" block container block-domain">
 
                         <div>
@@ -259,160 +227,68 @@
                         </div>
                     </section>
                     <section>
-                        <ul class="blog">
-                            <li class="relative filterDiv design">
-                                <div class="blog-item">
-                                    <a href="/article.html">
-                                        <img src="/images/musicapp.jpg" alt="" class="blog-image">
-                                        <p class="blog-title">Music is the universal language of mankind.</p>
-                                    </a>
-                                    <span class="blog-icons">
-                                        <img class="blog-icon" src="/icons/view.svg" alt="">
-                                        <img class="blog-icon" src="/icons/edit.png" alt="">
-                                        <img class="blog-icon" src="/icons/delete.svg" alt="">
-                                    </span>
+                        <article class="grid grid--1x2 feature">
+                            <div class="feature__content dashcomment" data-aos="fade-left">
+                                <span class="icon-container">
+                                    <svg class="icon icon--primary">
+                                        <use href="/icons/chat.svg"></use>
+                                    </svg>
+                                </span>
+                                <h3 class="feature__heading">John Doe</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+                                    obcaecati vel ad unde est illo at. Labore excepturi officia dolores!
+                                </p>
+                                <a href="#" target="_blank" class="btn btn--outline btn--learnmore link-arrow">Edit
+                                </a>
+                            </div>
+                            <div class="feature__content" data-aos="fade-left">
+                                <span class="icon-container">
+                                    <svg class="icon icon--primary">
+                                        <use href="/icons/chat.svg"></use>
+                                    </svg>
+                                </span>
+                                <h3 class="feature__heading">John Doe</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+                                    obcaecati vel ad unde est illo at. Labore excepturi officia dolores!
+                                </p>
+                                <a href="#" target="_blank" class="btn btn--outline btn--learnmore link-arrow">Edit
+                                </a>
+                            </div>
 
+                        </article>
+                        <article class="grid grid--1x2 feature">
+                            <div class="feature__content" data-aos="fade-left">
+                                <span class="icon-container">
+                                    <svg class="icon icon--primary">
+                                        <use href="/icons/chat.svg"></use>
+                                    </svg>
+                                </span>
+                                <h3 class="feature__heading">John Doe</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+                                    obcaecati vel ad unde est illo at. Labore excepturi officia dolores!
+                                </p>
+                                <a href="#" target="_blank" class="btn btn--outline btn--learnmore link-arrow">Edit
+                                </a>
+                            </div>
+                            <div class="feature__content" data-aos="fade-left">
+                                <span class="icon-container">
+                                    <svg class="icon icon--primary">
+                                        <use href="/icons/chat.svg"></use>
+                                    </svg>
+                                </span>
+                                <h3 class="feature__heading">John Doe</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+                                    obcaecati vel ad unde est illo at. Labore excepturi officia dolores!
+                                </p>
+                                <a href="#" target="_blank" class="btn btn--outline btn--learnmore link-arrow">Edit
+                                </a>
+                            </div>
 
-                                </div>
-
-                            </li>
-
-                            <li class="relative filterDiv tech">
-                                <div class="blog-item">
-                                    <a href="/article.html">
-                                        <img src="/images/pic.jpg" alt="" class="blog-image">
-                                        <p class="blog-title">Technology transforming lives</p>
-                                    </a>
-                                    <span class="blog-icons">
-                                        <img class="blog-icon" src="/icons/view.svg" alt="">
-                                        <img class="blog-icon" src="/icons/edit.png" alt="">
-                                        <img class="blog-icon" src="/icons/delete.svg" alt="">
-                                    </span>
-
-
-                                </div>
-
-                            </li>
-                            <li class="relative filterDiv news">
-                                <div class="blog-item">
-                                    <a href="/article.html">
-                                        <img src="/images/world.jpg" alt="" class="blog-image">
-                                        <p class="blog-title">Global warming is global warning</p>
-                                    </a>
-                                    <span class="blog-icons">
-                                        <img class="blog-icon" src="/icons/view.svg" alt="">
-                                        <img class="blog-icon" src="/icons/edit.png" alt="">
-                                        <img class="blog-icon" src="/icons/delete.svg" alt="">
-                                    </span>
-
-
-                                </div>
-
-                            </li>
-                            <li class="relative filterDiv web">
-                                <div class="blog-item">
-                                    <a href="/article.html">
-                                        <img src="/images/blog.jpg" alt="" class="blog-image">
-                                        <p class="blog-title">If at first you don’t succeed; call it version 1.0</p>
-                                    </a>
-                                    <span class="blog-icons">
-                                        <img class="blog-icon" src="/icons/view.svg" alt="">
-                                        <img class="blog-icon" src="/icons/edit.png" alt="">
-                                        <img class="blog-icon" src="/icons/delete.svg" alt="">
-                                    </span>
-
-
-                                </div>
-
-                            </li>
-                            <li class="relative filterDiv tech">
-                                <div class="blog-item">
-                                    <a href="/article.html">
-                                        <img src="/images/software.png" alt="" class="blog-image">
-                                        <p class="blog-title">What you need to know about a software</p>
-                                    </a>
-                                    <span class="blog-icons">
-                                        <img class="blog-icon" src="/icons/view.svg" alt="">
-                                        <img class="blog-icon" src="/icons/edit.png" alt="">
-                                        <img class="blog-icon" src="/icons/delete.svg" alt="">
-                                    </span>
-
-
-                                </div>
-
-                            </li>
-                            <li class="relative filterDiv web">
-                                <div class="blog-item">
-                                    <a href="/article.html">
-                                        <img src="/images/kalkashop.jpg" alt="" class="blog-image">
-                                        <p class="blog-title">Guess what? eBay has defined e-commerce.</p>
-                                    </a>
-                                    <span class="blog-icons">
-                                        <img class="blog-icon" src="/icons/view.svg" alt="">
-                                        <img class="blog-icon" src="/icons/edit.png" alt="">
-                                        <img class="blog-icon" src="/icons/delete.svg" alt="">
-                                    </span>
-
-
-                                </div>
-
-                            </li>
-                            <li class="relative filterDiv others">
-                                <div class="blog-item">
-                                    <a href="/article.html">
-                                        <img src="/images/ritcostock.jpg" alt="" class="blog-image">
-                                        <p class="blog-title">Good design is a good business.</p>
-                                    </a>
-                                    <span class="blog-icons">
-                                        <img class="blog-icon" src="/icons/view.svg" alt="">
-                                        <img class="blog-icon" src="/icons/edit.png" alt="">
-                                        <img class="blog-icon" src="/icons/delete.svg" alt="">
-                                    </span>
-
-
-                                </div>
-
-                            </li>
-                            <li class="relative filterDiv others">
-                                <div class="blog-item">
-                                    <a href="/article.html">
-                                        <img src="/images/etitexyz.jpg" alt="" class="blog-image">
-                                        <p class="blog-title">ASRH information through smart classes
-
-                                        </p>
-                                    </a>
-                                    <span class="blog-icons">
-                                        <img class="blog-icon" src="/icons/view.svg" alt="">
-                                        <img class="blog-icon" src="/icons/edit.png" alt="">
-                                        <img class="blog-icon" src="/icons/delete.svg" alt="">
-                                    </span>
-
-
-                                </div>
-
-                            </li>
-                            <li class="relative filterDiv others">
-                                <div class="blog-item">
-                                    <a href="/article.html">
-                                        <img src="/images/sms.jpg" alt="" class="blog-image">
-                                        <p class="blog-title">ETITE School Management System</p>
-                                    </a>
-                                    <span class="blog-icons">
-                                        <img class="blog-icon" src="/icons/view.svg" alt="">
-                                        <img class="blog-icon" src="/icons/edit.png" alt="">
-                                        <img class="blog-icon" src="/icons/delete.svg" alt="">
-                                    </span>
-
-
-                                </div>
-
-                            </li>
-
-
-
-
-                            <!-- More images... -->
-                        </ul>
+                        </article>
                     </section>
 
 
