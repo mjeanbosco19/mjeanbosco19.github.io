@@ -162,7 +162,7 @@
 
         <section class="main-contents">
             <div class="article">
-                <img class="article-image" src="/images/blog.webp" alt="">
+                <img class="article-image" src="/images/devtech.png" alt="">
 
                 <h2 class="article-title">This a blog heading title</h2>
 
@@ -250,16 +250,17 @@
                 <div class="comment">
                     <label for="comment" class="comment-section">Add your comment</label>
                     <div>
-                        <label for="email"><b>Names</b></label>
-                        <input class="comment-input" type="text" id="name" placeholder="Enter Your Name" name="name"
-                            minlength="4" maxlength="50" required>
-                        <label for="email"><b>Email</b></label>
-                        <input class="comment-input" type="text" id="email" placeholder="Enter Email" name="email"
-                            minlength="4" maxlength="50" required>
-                        <label for="email"><b>Your comment</b></label>
-                        <textarea rows="4" name="comment" id="comment" class="comment-input"></textarea>
-
-                        <button class="btn btn--primary">Submit a comment</button>
+                        <form  id="contact-form" action="#">
+                            <label for="email"><b>Names</b></label>
+                            <input class="comment-input" type="text" id="name" placeholder="Enter Your Name" name="name"
+                                minlength="4" maxlength="50" required>
+                            <label for="email"><b>Email</b></label>
+                            <input class="comment-input" type="text" id="email" placeholder="Enter Email" name="email"
+                                minlength="4" maxlength="50" required>
+                            <label for="email"><b>Your comment</b></label>
+                            <textarea rows="4" name="comment" id="comment" class="comment-input"></textarea>
+                            <button class="btn btn--primary">Submit a comment</button>
+                        </form>
                     </div>
 
                 </div>
@@ -327,6 +328,7 @@
             h.parentNode.insertBefore(j, h);
         })(window, document, "script", "https://waw.gallabox.com");
     </script>
+    <script src="js/contact.js"></script>
 
 </body>
 

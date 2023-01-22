@@ -1152,6 +1152,15 @@ video {
     font-size: 1rem;
 }
 
+.error {
+    color: var(--color-accent);
+    font-size: 1rem;
+}
+
+#contact-form .error {
+    color: red;
+}
+
 /* Style the input fields when they are valid */
 input[type="text"].valid,
 input[type="password"].valid {

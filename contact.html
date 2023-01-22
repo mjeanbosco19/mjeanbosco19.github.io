@@ -191,19 +191,25 @@
                         <div class="message">
                             <span for="message" class="message-title">Get in Touch</span>
                             <div>
-                                <form action="#">
-                                    <label for="email"><b>Names</b></label>
-                                    <input class="message-input" type="text" id="name" placeholder="Enter Your Name"
-                                        name="name" minlength="4" maxlength="50" required>
-                                    <label for="email"><b>Email</b></label>
-                                    <input class="message-input" type="text" id="email" placeholder="Enter Email"
-                                        name="email" minlength="4" maxlength="50" required>
-                                    <label for="email"><b>Your message</b></label>
-                                    <textarea rows="4" name="message" id="message" class="message-input"></textarea>
-                                    <button class="btn btn--primary">Send a message</button>
+
+                                <form id="contact-form">
+                                    <label for="name">Name:</label>
+                                    <input class="message-input" type="text" id="name" name="name" minlength="2" maxlength="125" required>
+                                    <div id="name-error" class="error"></div>
+                                
+                                    <label for="email">Email:</label>
+                                    <input class="message-input" type="email" id="email" name="email" minlength="6" required>
+                                    <div id="email-error" class="error"></div>
+                                
+                                    <label for="message">Message:</label>
+                                    <textarea class="message-input" id="message" name="message" minlength="4" required></textarea>
+                                    <div id="message-error" class="error"></div>
+                                
+                                    <input class="btn btn--primary" type="submit" value="Submit">
                                 </form>
 
-                                
+
+
                             </div>
 
                         </div>
@@ -279,6 +285,8 @@
             h.parentNode.insertBefore(j, h);
         })(window, document, "script", "https://waw.gallabox.com");
     </script>
+
+    <script src="js/contact.js"></script>
 
 </body>
 

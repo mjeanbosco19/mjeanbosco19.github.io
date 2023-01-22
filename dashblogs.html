@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="node_modules/froala-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -213,14 +214,15 @@
                     </div>
 
                     <!-- Add blog Start Here -->
-                    <section id="blogForm" class="addblog-section">
+                    <section id="blog-form" class="addblog-section">
                         <form action="#">
                             <label for="name"><b>Blog Title</b></label>
                             <input class="message-input" type="text" id="title" placeholder="Enter blog title"
-                                name="name" minlength="4" maxlength="50" >
+                                name="name" minlength="4" maxlength="50">
+                            <p class="error-message"></p>
                             <label for="file"><b>Blog cover photo</b></label>
-                            <input class="message-input" type="file" id="cover-photo" placeholder="Attach image" name="file"
-                                >
+                            <input class="message-input" type="file" accept="image/*" id="cover-photo"
+                                placeholder="Attach image" name="file">
                             <label for="category"><b>Choose a category:</b></label>
                             <select id="category" name="category" class="message-input">
                                 <option value="Design">Design</option>
@@ -229,8 +231,13 @@
                                 <option value="News">News</option>
                                 <option value="Others">Others</option>
                             </select>
+                            <p class="error-message"></p>
+                            <div id="froala"></div>
+
+
                             <label for="text"><b>Blog contents</b></label>
                             <textarea rows="4" name="message" id="description" class="message-input"></textarea>
+                            <p class="error-message"></p>
                             <button type="submit" class="btn btn--primary btn--stretched">Add Blog</button>
                         </form>
 
@@ -427,6 +434,11 @@
     </div>
     </div>
     <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+    <script type="text/javascript" src="node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
+    <script> var editor = new FroalaEditor('#froala');
+    </script>
+    <script type="text/javascript" src="node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
 </body>
 
 </html>
