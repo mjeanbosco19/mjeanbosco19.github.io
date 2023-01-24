@@ -215,30 +215,33 @@
 
                     <!-- Add blog Start Here -->
                     <section id="blog-form" class="addblog-section">
-                        <form action="#">
+                        <form action="#" onsubmit="return validateBlogForm()">
                             <label for="name"><b>Blog Title</b></label>
-                            <input class="message-input" type="text" id="title" placeholder="Enter blog title"
+                            <input class="message-input" type="text" id="blogTitle" placeholder="Enter blog title"
                                 name="name" minlength="4" maxlength="50">
-                            <p class="error-message"></p>
+                            <div id="titleError" class="error-message"></div>
                             <label for="file"><b>Blog cover photo</b></label>
-                            <input class="message-input" type="file" accept="image/*" id="cover-photo"
+                            <input class="message-input" type="file" accept="image/*" id="blogCover"
                                 placeholder="Attach image" name="file">
+                            <div id="coverError" class="error-message"></div>
                             <label for="category"><b>Choose a category:</b></label>
-                            <select id="category" name="category" class="message-input">
+                            <select id="blogCategory" name="category" class="message-input">
+                                <option value=""></option>
                                 <option value="Design">Design</option>
                                 <option value="Web">Web</option>
                                 <option value="Tech">Tech</option>
                                 <option value="News">News</option>
                                 <option value="Others">Others</option>
                             </select>
-                            <p class="error-message"></p>
-                            <div id="froala"></div>
+                            <div id="categoryError" class="error-message"></div>
 
+                            <p for="text"><b>Blog contents</b></p>
+                            <div class="blogDescription" id="froala"></div>
+                            <div id="descriptionError" class="error-message"></div>
 
-                            <label for="text"><b>Blog contents</b></label>
-                            <textarea rows="4" name="message" id="description" class="message-input"></textarea>
-                            <p class="error-message"></p>
-                            <button type="submit" class="btn btn--primary btn--stretched">Add Blog</button>
+                            <input type="submit" value="Add Blog" class="btn btn--primary btn--stretched"
+                                >
+
                         </form>
 
                         <button type="button" class="btn btn--accent btn--stretched"
@@ -433,7 +436,8 @@
         </main>
     </div>
     </div>
-    <script src="js/main.js"></script>
+   
+    <!-- <script src="js/main.js"></script> -->
     <script src="js/blog.js"></script>
     <script type="text/javascript" src="node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
     <script> var editor = new FroalaEditor('#froala');

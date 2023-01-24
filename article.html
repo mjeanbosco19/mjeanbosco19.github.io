@@ -250,16 +250,18 @@
                 <div class="comment">
                     <label for="comment" class="comment-section">Add your comment</label>
                     <div>
-                        <form  id="contact-form" action="#">
+                        <form id="comment-form">
                             <label for="email"><b>Names</b></label>
-                            <input class="comment-input" type="text" id="name" placeholder="Enter Your Name" name="name"
-                                minlength="4" maxlength="50" required>
+                            <input class="comment-input" type="text" id="name" placeholder="Enter Your Name"
+                                name="name">
+                            <div id="name-error" class="error"></div>
                             <label for="email"><b>Email</b></label>
-                            <input class="comment-input" type="text" id="email" placeholder="Enter Email" name="email"
-                                minlength="4" maxlength="50" required>
+                            <input class="comment-input" type="text" id="email" placeholder="Enter Email" name="email">
+                            <div id="email-error" class="error"></div>
                             <label for="email"><b>Your comment</b></label>
                             <textarea rows="4" name="comment" id="comment" class="comment-input"></textarea>
-                            <button class="btn btn--primary">Submit a comment</button>
+                            <div id="message-error" class="error"></div>
+                            <button type="submit" class="btn btn--primary">Submit a comment</button>
                         </form>
                     </div>
 

@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hi, I am Jean Bosco Mugiraneza</title>
-    <link rel="stylesheet" href="/css/app.css" />
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -166,13 +165,13 @@
             </div>
             <div class="login-section">
                 <div class="login-form">
-                    <form class="my-form" action="dashboard.html" id="login-form" onsubmit="return validateForm()">
+                    <form class="my-form" action="dashboard.html" id="login-form" onsubmit="return validateLoginForm()">
                         <div>
                             <label for="email" class="form-item"> Email</label>
                             <div class="login-input">
                                 <input id="email" name="email" type="email" autocomplete="email" class="form-input">
                             </div>
-                            <div id="email-error" class="error-message"></div>
+                            <span id="emailError" class="error"></span>
                         </div>
 
                         <div>
@@ -181,8 +180,16 @@
                                 <input id="password" name="password" type="password" autocomplete="current-password"
                                     class="form-input">
 
+                                <span class="form-item">
+                                    <input type="checkbox" id="showPassword" onclick="showHidePassword()"
+                                        style="margin-right: 1rem;"> Show
+                                    Password
+                                </span>
+
                             </div>
-                            <div id="password-error" class="error-message"></div>
+
+                            <span id="passwordError" class="error"></span>
+
 
                         </div>
 
@@ -198,11 +205,11 @@
                             </div>
                         </div>
                         <div>
-                            <a href="dashboard.html"> <input type="submit" class="login-button" value="Submit"></a>
+                            <a href="dashboard.html"> <input type="submit" id="login" class="login-button" value="Submit"></a>
 
                         </div>
                     </form>
-
+                    <div class="error" id="loginErrorMessage"></div>
 
                     <button type="button" class="login-with-google">
                         Sign in with Google
@@ -228,7 +235,7 @@
         </div>
     </main>
     <script src="js/main.js"></script>
-    <script src="js/blog.js"></script>
+ 
 
     <script>
         (function (w, d, s, u) {
@@ -254,8 +261,6 @@
             h.parentNode.insertBefore(j, h);
         })(window, document, "script", "https://waw.gallabox.com");
     </script>
-
-    <script src="js/login.js"></script>
 
 </body>
 

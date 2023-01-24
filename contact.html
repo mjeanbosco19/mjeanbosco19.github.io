@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hi, I am Jean Bosco Mugiraneza</title>
-    <link rel="stylesheet" href="/css/app.css" />
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -194,18 +193,19 @@
 
                                 <form id="contact-form">
                                     <label for="name">Name:</label>
-                                    <input class="message-input" type="text" id="name" name="name" minlength="2" maxlength="125" required>
+                                    <input class="message-input" type="text" id="name" name="name">
                                     <div id="name-error" class="error"></div>
-                                
+
                                     <label for="email">Email:</label>
-                                    <input class="message-input" type="email" id="email" name="email" minlength="6" required>
+                                    <input class="message-input" type="email" id="email" name="email">
                                     <div id="email-error" class="error"></div>
-                                
+
                                     <label for="message">Message:</label>
-                                    <textarea class="message-input" id="message" name="message" minlength="4" required></textarea>
+                                    <textarea class="message-input" id="message" name="message"></textarea>
                                     <div id="message-error" class="error"></div>
-                                
-                                    <input class="btn btn--primary" type="submit" value="Submit">
+
+                                    <input class="btn btn--primary" type="submit" value="Submit"
+                                        onclick="storeInquiry()">
                                 </form>
 
 
@@ -285,8 +285,6 @@
             h.parentNode.insertBefore(j, h);
         })(window, document, "script", "https://waw.gallabox.com");
     </script>
-
-    <script src="js/contact.js"></script>
 
 </body>
 

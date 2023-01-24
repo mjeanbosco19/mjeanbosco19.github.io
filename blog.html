@@ -184,6 +184,10 @@
                     </div>
                 </div>
             </section>
+
+            <section>
+                <div id="blogs"></div>
+            </section>
             <section>
                 <ul class="blog">
                     <li class="relative filterDiv design">
@@ -365,6 +369,30 @@
 
         </aside>
     </main>
+
+
+
+    <script>
+        var blogs = JSON.parse(localStorage.getItem("blogs"));
+        if (blogs) {
+            var blogContainer = document.getElementById("blogs");
+            blogs.forEach(function (blog) {
+                var blogCard = document.createElement("div");
+                blogCard.innerHTML = `
+            <h2>${blog.title}</h2>
+            <img src="${blog.cover}" alt="Blog cover">
+            <p>Category: ${blog.category}</p>
+            <p>${blog.description}</p>
+            <button onclick="window.location.href='blog-detail.html?title=${blog.title}'">Read more</button>
+          `;
+                blogContainer.appendChild(blogCard);
+            });
+        } else {
+            blogContainer.innerHTML = "No blogs found.";
+        }
+    </script>
+
+
     <script src="js/main.js"></script>
 
     <script>
