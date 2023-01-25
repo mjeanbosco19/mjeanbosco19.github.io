@@ -214,8 +214,8 @@
                     </div>
 
                     <!-- Add blog Start Here -->
-                    <section id="blog-form" class="addblog-section">
-                        <form action="#" onsubmit="return validateBlogForm()">
+                    <section id="blogForm" class="addblog-section">
+                        <form onsubmit="return validateBlogForm()">
                             <label for="name"><b>Blog Title</b></label>
                             <input class="message-input" type="text" id="blogTitle" placeholder="Enter blog title"
                                 name="name" minlength="4" maxlength="50">
@@ -226,7 +226,7 @@
                             <div id="coverError" class="error-message"></div>
                             <label for="category"><b>Choose a category:</b></label>
                             <select id="blogCategory" name="category" class="message-input">
-                                <option value=""></option>
+                                <option value="">--Please Select Category--</option>
                                 <option value="Design">Design</option>
                                 <option value="Web">Web</option>
                                 <option value="Tech">Tech</option>
@@ -240,12 +240,12 @@
                             <div id="descriptionError" class="error-message"></div>
 
                             <input type="submit" value="Add Blog" class="btn btn--primary btn--stretched"
-                                >
+                                onsubmit="storeBlog()">
 
                         </form>
 
-                        <button type="button" class="btn btn--accent btn--stretched"
-                            onclick="closeAddBlog()">Close</button>
+                        <button type="button" class="btn btn--accent btn--stretched" onclick="closeAddBlog()">Hide
+                            form</button>
                     </section>
 
 
@@ -436,11 +436,11 @@
         </main>
     </div>
     </div>
-   
-    <!-- <script src="js/main.js"></script> -->
+
+    <script src="js/main.js"></script>
     <script src="js/blog.js"></script>
     <script type="text/javascript" src="node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
-    <script> var editor = new FroalaEditor('#froala');
+    <script> let editor = new FroalaEditor('#froala');
     </script>
     <script type="text/javascript" src="node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
 </body>

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hi, I am Jean Bosco Mugiraneza</title>
-    <link rel="stylesheet" href="/css/app.css" />
+
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -192,7 +192,7 @@
                     venenatis tellus in. Sed
                     pulvinar proin gravida hendrerit lectus. Aenean pharetra magna ac placerat vestibulum lectus mauris
                     ultrices eros.
-                    Libero nunc consequat interdum varius sit amet mattis vulputate. At lectus urna duis convallis
+                    Libero nunc consequat interdum letius sit amet mattis vulputate. At lectus urna duis convallis
                     convallis tellus id.
                     Ultrices vitae auctor eu augue ut lectus arcu bibendum at. Enim praesent elementum facilisis leo vel
                     fringilla est
@@ -207,7 +207,7 @@
                     id volutpat lacus
                     laoreet. Turpis cursus in hac habitasse platea dictumst quisque. Ac placerat vestibulum lectus
                     mauris ultrices eros in
-                    cursus turpis. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Varius duis at
+                    cursus turpis. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. letius duis at
                     consectetur lorem.
                     Vitae congue eu consequat ac felis. Lorem ipsum dolor sit amet consectetur adipiscing elit.
                     Consequat id porta nibh
@@ -224,7 +224,7 @@
                     dictumst quisque sagittis.
                     Et netus et malesuada fames ac turpis egestas sed. Pharetra pharetra massa massa ultricies.
                     Consectetur libero id
-                    faucibus nisl. Consequat interdum varius sit amet mattis vulputate. Vulputate ut pharetra sit amet
+                    faucibus nisl. Consequat interdum letius sit amet mattis vulputate. Vulputate ut pharetra sit amet
                     aliquam id diam.
                     Imperdiet nulla malesuada pellentesque elit eget. Aliquet nibh praesent tristique magna sit amet
                     purus. Condimentum
@@ -250,7 +250,7 @@
                 <div class="comment">
                     <label for="comment" class="comment-section">Add your comment</label>
                     <div>
-                        <form id="comment-form">
+                        <form id="commentForm">
                             <label for="email"><b>Names</b></label>
                             <input class="comment-input" type="text" id="name" placeholder="Enter Your Name"
                                 name="name">
@@ -260,7 +260,7 @@
                             <div id="email-error" class="error"></div>
                             <label for="email"><b>Your comment</b></label>
                             <textarea rows="4" name="comment" id="comment" class="comment-input"></textarea>
-                            <div id="message-error" class="error"></div>
+                            <div id="comment-error" class="error"></div>
                             <button type="submit" class="btn btn--primary">Submit a comment</button>
                         </form>
                     </div>
@@ -301,10 +301,13 @@
         </aside>
     </main>
     <script src="js/main.js"></script>
+    <script src="js/comment.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+
+
 
     <script>
         (function (w, d, s, u) {
@@ -323,14 +326,14 @@
                     replyOptions: ['UI &UX Design', 'Website Development', 'Mobile App', 'I\' am just browsing'],
                 },
             };
-            var h = d.getElementsByTagName(s)[0],
+            let h = d.getElementsByTagName(s)[0],
                 j = d.createElement(s);
             j.async = true;
             j.src = u + "/whatsapp-widget.min.js?_=" + Math.random();
             h.parentNode.insertBefore(j, h);
         })(window, document, "script", "https://waw.gallabox.com");
     </script>
-    <script src="js/contact.js"></script>
+
 
 </body>
 

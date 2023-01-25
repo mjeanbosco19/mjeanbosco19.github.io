@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hi, I am Jean Bosco Mugiraneza</title>
-    <link rel="stylesheet" href="/css/app.css" />
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -373,11 +372,11 @@
 
 
     <script>
-        var blogs = JSON.parse(localStorage.getItem("blogs"));
+        let blogs = JSON.parse(localStorage.getItem("blogs"));
         if (blogs) {
-            var blogContainer = document.getElementById("blogs");
+            let blogContainer = document.getElementById("blogs");
             blogs.forEach(function (blog) {
-                var blogCard = document.createElement("div");
+                let blogCard = document.createElement("div");
                 blogCard.innerHTML = `
             <h2>${blog.title}</h2>
             <img src="${blog.cover}" alt="Blog cover">
@@ -394,6 +393,7 @@
 
 
     <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
 
     <script>
         (function (w, d, s, u) {
@@ -412,7 +412,7 @@
                     replyOptions: ['UI &UX Design', 'Website Development', 'Mobile App', 'I\' am just browsing'],
                 },
             };
-            var h = d.getElementsByTagName(s)[0],
+            let h = d.getElementsByTagName(s)[0],
                 j = d.createElement(s);
             j.async = true;
             j.src = u + "/whatsapp-widget.min.js?_=" + Math.random();

@@ -35,15 +35,15 @@
                             <img class="menu-mobile-icon" src="/icons/user.svg" alt="" />
                             My Blogs
                         </a>
-                        <a href="#" class="menu-mobile-item">
+                        <a href="dashcomments.html" class="menu-mobile-item">
                             <img class="menu-mobile-icon" src="/icons/award.svg" alt="" />
                             Comments
                         </a>
-                        <a href="#" class="menu-mobile-item">
+                        <a href="dashusers.html" class="menu-mobile-item">
                             <img class="menu-mobile-icon" src="/icons/image.svg" alt="" />
                             Users
                         </a>
-                        <a href="#" class="menu-mobile-item">
+                        <a href="dashmessages.html" class="menu-mobile-item">
                             <img class="menu-mobile-icon" src="/icons/box.svg" alt="" />
                             Messages
                         </a>
@@ -106,13 +106,13 @@
                             <span class="dashitem">Comments</span>
                         </a>
 
-                        <a href="#" class="dashboard-menu-item">
+                        <a href="dashusers.html" class="dashboard-menu-item">
                             <span class="icon-container"><img class="icon--menu icon--primary" src="/icons/user.svg"
                                     alt=""></span>
                             <span class="dashitem">Users</span>
                         </a>
 
-                        <a href="#" class="dashboard-menu-item">
+                        <a href="dashmessages.html" class="dashboard-menu-item">
                             <span class="icon-container"><img class="icon--menu icon--primary" src="/icons/report.svg"
                                     alt=""></span>
                             <span class="dashitem">Messages</span>
@@ -200,62 +200,55 @@
                     <div class="dashboard-main">
                         <h1 class="dash-title">Dashboard</h1>
                     </div>
-                    <div class="dash-contents">
-                        <!-- my contents -->
-                        <div class="grid grid--1x3">
-                            <div class="dashmessage-item">
-
-                                <span class="icon-container">
-                                    <img class="icon--menu icon--primary" src="/icons/user.svg" alt="">
-                                </span>
-                                <h2 class="dashmessage-name">User Names</h2>
-                                <p class="dashmessage-email">Email</p>
-                                <p class="dashmessage-info">Comment</p>
-                                <span class="blog-icons">
-                                    <img class="blog-icon" src="/icons/favorite.svg" alt="">
-                                    <!-- <img class="blog-icon" src="/icons/edit.png" alt=""> -->
-                                    <img class="blog-icon" src="/icons/delete.svg" alt="">
-                                </span>
-                            </div>
-                            <div class="dashmessage-item">
-
-                                <span class="icon-container">
-                                    <img class="icon--menu icon--primary" src="/icons/user.svg" alt="">
-                                </span>
-                                <h2 class="dashmessage-name">User Names</h2>
-                                <p class="dashmessage-email">Email</p>
-                                <p class="dashmessage-info">Comment</p>
-                                <span class="blog-icons">
-                                    <img class="blog-icon" src="/icons/favorite.svg" alt="">
-                                    <!-- <img class="blog-icon" src="/icons/edit.png" alt=""> -->
-                                    <img class="blog-icon" src="/icons/delete.svg" alt="">
-                                </span>
-                            </div>
-                            <div class="dashmessage-item">
-
-                                <span class="icon-container">
-                                    <img class="icon--menu icon--primary" src="/icons/user.svg" alt="">
-                                </span>
-                                <h2 class="dashmessage-name">User Names</h2>
-                                <p class="dashmessage-email">Email</p>
-                                <p class="dashmessage-info">Comment</p>
-                                <span class="blog-icons">
-                                    <img class="blog-icon" src="/icons/favorite.svg" alt="">
-                                    <!-- <img class="blog-icon" src="/icons/edit.png" alt=""> -->
-                                    <img class="blog-icon" src="/icons/delete.svg" alt="">
-                                </span>
-                            </div>
-                        </div>
-
-
-
-                        <!-- /End  -->
-                    </div>
+                    <div class="grid grid--1x3" id="commentsContainer"></div>
                 </div>
             </main>
         </div>
     </div>
     <script src="js/main.js"></script>
+    <script src="js/comment.js"></script>
+
+    <script>
+        const commentsContainer = document.getElementById("commentsContainer");
+        const comments = JSON.parse(localStorage.getItem("comments")) || [];
+
+        function renderComments() {
+            commentsContainer.innerHTML = "";
+            comments.forEach(function (comment, index) {
+                const commentCard = document.createElement("div");
+                commentCard.classList.add("dashmessage-item");
+
+                const name = document.createElement("p");
+                name.innerHTML = `<div class="inquiry-name">${comment.name} `;
+                commentCard.appendChild(name);
+
+                const email = document.createElement("p");
+                email.innerHTML = `<div class="inquiry-email"> ${comment.email}`;
+                commentCard.appendChild(email);
+
+                const commentText = document.createElement("p");
+                commentText.innerHTML = `<div class="inquiry-message">${comment.comment} `;
+                commentCard.appendChild(commentText);
+
+                const deleteButton = document.createElement("button");
+                deleteButton.innerText = "Delete";
+                deleteButton.addEventListener("click", function () {
+                    comments.splice(index, 1);
+                    localStorage.setItem("comments", JSON.stringify(comments));
+                    renderComments();
+                });
+                commentCard.appendChild(deleteButton);
+
+                commentsContainer.appendChild(commentCard);
+            });
+        }
+
+        renderComments();
+
+
+    </script>
+
+
 </body>
 
 </html>

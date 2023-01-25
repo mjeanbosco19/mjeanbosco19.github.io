@@ -245,3 +245,6 @@ function validateForm(e) {
     document.getElementById("contact-form").submit();
   }
 }
+
+
+
