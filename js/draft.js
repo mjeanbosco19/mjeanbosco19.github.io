@@ -248,3 +248,19 @@ function validateForm(e) {
 
 
 
+const selectedFile = blogImage.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(selectedFile);
+    reader.onload = () => {
+      let newId = Math.floor(Math.random() * (1000000 - 100000) + 100000);
+      const data = {
+        id: newId,
+        title: blogTitle.value,
+        blogContent: blogContent.value,
+        date: getCurrentDate(),
+        image: reader.result,
+      };
+    }
+
+
+    <p>${blog.description}</p>

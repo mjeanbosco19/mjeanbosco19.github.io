@@ -185,7 +185,7 @@
             </section>
 
             <section>
-                <div id="blogs"></div>
+                <div class="blog" id="blogsList"></div>
             </section>
             <section>
                 <ul class="blog">
@@ -204,132 +204,6 @@
                         </div>
 
                     </li>
-
-                    <li class="relative filterDiv tech">
-                        <div class="blog-item">
-                            <a href="/article.html">
-                                <img src="/images/pic.jpg" alt="" class="blog-image">
-                                <p class="blog-title">Technology transforming lives</p>
-                            </a>
-                            <span class="blog-icons">
-                                <img class="blog-icon" src="/icons/like.svg" alt="">
-                                <img class="blog-icon" src="/icons/comment.svg" alt="">
-                                <img class="blog-icon" src="/icons/share.svg" alt="">
-                            </span>
-
-                        </div>
-
-                    </li>
-                    <li class="relative filterDiv news">
-                        <div class="blog-item">
-                            <a href="/article.html">
-                                <img src="/images/world.jpg" alt="" class="blog-image">
-                                <p class="blog-title">Global warming is global warning</p>
-                            </a>
-                            <span class="blog-icons">
-                                <img class="blog-icon" src="/icons/like.svg" alt="">
-                                <img class="blog-icon" src="/icons/comment.svg" alt="">
-                                <img class="blog-icon" src="/icons/share.svg" alt="">
-                            </span>
-
-                        </div>
-
-                    </li>
-                    <li class="relative filterDiv web">
-                        <div class="blog-item">
-                            <a href="/article.html">
-                                <img src="/images/blog.jpg" alt="" class="blog-image">
-                                <p class="blog-title">If at first you don’t succeed; call it version 1.0</p>
-                            </a>
-                            <span class="blog-icons">
-                                <img class="blog-icon" src="/icons/like.svg" alt="">
-                                <img class="blog-icon" src="/icons/comment.svg" alt="">
-                                <img class="blog-icon" src="/icons/share.svg" alt="">
-                            </span>
-
-                        </div>
-
-                    </li>
-                    <li class="relative filterDiv tech">
-                        <div class="blog-item">
-                            <a href="/article.html">
-                                <img src="/images/software.png" alt="" class="blog-image">
-                                <p class="blog-title">What you need to know about a software</p>
-                            </a>
-                            <span class="blog-icons">
-                                <img class="blog-icon" src="/icons/like.svg" alt="">
-                                <img class="blog-icon" src="/icons/comment.svg" alt="">
-                                <img class="blog-icon" src="/icons/share.svg" alt="">
-                            </span>
-
-                        </div>
-
-                    </li>
-                    <li class="relative filterDiv web">
-                        <div class="blog-item">
-                            <a href="/article.html">
-                                <img src="/images/kalkashop.jpg" alt="" class="blog-image">
-                                <p class="blog-title">Guess what? eBay has defined e-commerce.</p>
-                            </a>
-                            <span class="blog-icons">
-                                <img class="blog-icon" src="/icons/like.svg" alt="">
-                                <img class="blog-icon" src="/icons/comment.svg" alt="">
-                                <img class="blog-icon" src="/icons/share.svg" alt="">
-                            </span>
-
-                        </div>
-
-                    </li>
-                    <li class="relative filterDiv others">
-                        <div class="blog-item">
-                            <a href="/article.html">
-                                <img src="/images/ritcostock.jpg" alt="" class="blog-image">
-                                <p class="blog-title">Good design is a good business.</p>
-                            </a>
-                            <span class="blog-icons">
-                                <img class="blog-icon" src="/icons/like.svg" alt="">
-                                <img class="blog-icon" src="/icons/comment.svg" alt="">
-                                <img class="blog-icon" src="/icons/share.svg" alt="">
-                            </span>
-
-                        </div>
-
-                    </li>
-                    <li class="relative filterDiv others">
-                        <div class="blog-item">
-                            <a href="/article.html">
-                                <img src="/images/etitexyz.jpg" alt="" class="blog-image">
-                                <p class="blog-title">ASRH information through smart classes
-
-                                </p>
-                            </a>
-                            <span class="blog-icons">
-                                <img class="blog-icon" src="/icons/like.svg" alt="">
-                                <img class="blog-icon" src="/icons/comment.svg" alt="">
-                                <img class="blog-icon" src="/icons/share.svg" alt="">
-                            </span>
-
-                        </div>
-
-                    </li>
-                    <li class="relative filterDiv others">
-                        <div class="blog-item">
-                            <a href="/article.html">
-                                <img src="/images/sms.jpg" alt="" class="blog-image">
-                                <p class="blog-title">ETITE School Management System</p>
-                            </a>
-                            <span class="blog-icons">
-                                <img class="blog-icon" src="/icons/like.svg" alt="">
-                                <img class="blog-icon" src="/icons/comment.svg" alt="">
-                                <img class="blog-icon" src="/icons/share.svg" alt="">
-                            </span>
-
-                        </div>
-
-                    </li>
-
-
-
 
                     <!-- More images... -->
                 </ul>
@@ -369,31 +243,40 @@
         </aside>
     </main>
 
-
-
     <script>
-        let blogs = JSON.parse(localStorage.getItem("blogs"));
-        if (blogs) {
-            let blogContainer = document.getElementById("blogs");
-            blogs.forEach(function (blog) {
+        // My Blogs 
+
+        let myblogs = JSON.parse(localStorage.getItem("blogs"));
+        if (myblogs) {
+            let blogContainer = document.getElementById("blogsList");
+            myblogs.forEach(function (blog) {
                 let blogCard = document.createElement("div");
                 blogCard.innerHTML = `
-            <h2>${blog.title}</h2>
-            <img src="${blog.cover}" alt="Blog cover">
+                <div class = "blog-item">
+                    <img src="${blog.cover}" class="blog-image" alt="Blog cover">
+                    <h2 class="blog-title">${blog.title}</h2>
             <p>Category: ${blog.category}</p>
-            <p>${blog.description}</p>
-            <button onclick="window.location.href='blog-detail.html?title=${blog.title}'">Read more</button>
+            
+            
+                         <button class = "view-button btn btn--primary btn--outline" onclick="window.location.href='article.html'">Read more</button>
+
+      
+         
+</div>
+            
           `;
                 blogContainer.appendChild(blogCard);
             });
         } else {
             blogContainer.innerHTML = "No blogs found.";
         }
+
     </script>
 
 
+
     <script src="js/main.js"></script>
-    <script src="js/blog.js"></script>
+    <script src="js/blogs.js"></script>
 
     <script>
         (function (w, d, s, u) {

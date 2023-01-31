@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="node_modules/froala-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet"
+        type="text/css" />
 </head>
 
 <body>
@@ -209,43 +210,51 @@
                     </div>
 
                     <div class="add-blog">
-                        <button class="btn btn--primary btn--stretched" onclick="openAddBlog()">Add new
+                        <button id="createBlogButton" class="btn btn--primary btn--stretched">Add new
                             Blog</button>
                     </div>
 
                     <!-- Add blog Start Here -->
-                    <section id="blogForm" class="addblog-section">
-                        <form onsubmit="return validateBlogForm()">
-                            <label for="name"><b>Blog Title</b></label>
-                            <input class="message-input" type="text" id="blogTitle" placeholder="Enter blog title"
-                                name="name" minlength="4" maxlength="50">
-                            <div id="titleError" class="error-message"></div>
-                            <label for="file"><b>Blog cover photo</b></label>
-                            <input class="message-input" type="file" accept="image/*" id="blogCover"
-                                placeholder="Attach image" name="file">
-                            <div id="coverError" class="error-message"></div>
-                            <label for="category"><b>Choose a category:</b></label>
-                            <select id="blogCategory" name="category" class="message-input">
-                                <option value="">--Please Select Category--</option>
-                                <option value="Design">Design</option>
-                                <option value="Web">Web</option>
-                                <option value="Tech">Tech</option>
-                                <option value="News">News</option>
-                                <option value="Others">Others</option>
-                            </select>
-                            <div id="categoryError" class="error-message"></div>
+                    <div id="blogModal" style="display:none;">
+                        <section id="blogForm" class="addblog-section">
+                            <form onsubmit="return validateBlogForm()">
+                                <label for="name"><b>Blog Title</b></label>
+                                <input class="message-input" type="text" id="blogTitle" placeholder="Enter blog title"
+                                    name="name" minlength="4" maxlength="50">
+                                <div id="titleError" class="error-message"></div>
+                                <label for="file"><b>Blog cover photo</b></label>
+                                <input class="message-input" type="file" accept="image/*" id="blogCover"
+                                    placeholder="Attach image" name="file">
+                                <div id="coverError" class="error-message"></div>
+                                <label for="category"><b>Choose a category:</b></label>
+                                <select id="blogCategory" name="category" class="message-input">
+                                    <option value="">--Please Select Category--</option>
+                                    <option value="Design">Design</option>
+                                    <option value="Web">Web</option>
+                                    <option value="Tech">Tech</option>
+                                    <option value="News">News</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                                <div id="categoryError" class="error-message"></div>
+                                <p for="text"><b>Blog contents</b></p>
 
-                            <p for="text"><b>Blog contents</b></p>
-                            <div class="blogDescription" id="froala"></div>
-                            <div id="descriptionError" class="error-message"></div>
+                                <div class="blogDescription"><textarea id="froala" name="" cols="30"
+                                        rows="10"></textarea></div>
+                                <div id="descriptionError" class="error-message"></div>
+                                <!-- <input type="submit" value="Add Blog" class="btn btn--primary btn--stretched"
+                                    onsubmit="storeBlog()"> -->
+                                <div id="myBtnContainer">
+                                    <button type="submit" id="saveButton" class="btn btn--primary btn--stretched">
+                                        Publish</button>
+                                    <button type="button" id="hideForm" class="btn btn--accent btn--stretched">Hide
+                                        form</button>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
 
-                            <input type="submit" value="Add Blog" class="btn btn--primary btn--stretched"
-                                onsubmit="storeBlog()">
-
-                        </form>
-
-                        <button type="button" class="btn btn--accent btn--stretched" onclick="closeAddBlog()">Hide
-                            form</button>
+                    <section>
+                        <div class="blog" id="blogs"></div>
                     </section>
 
 
@@ -436,13 +445,15 @@
         </main>
     </div>
     </div>
-
+    <script src="js/blogs.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/blog.js"></script>
-    <script type="text/javascript" src="node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
-    <script> let editor = new FroalaEditor('#froala');
+
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
+    <script>
+        let editor = new FroalaEditor('#froala');
     </script>
-    <script type="text/javascript" src="node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
 </body>
 
 </html>
