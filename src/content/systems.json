@@ -18,8 +18,8 @@
   {
     "id": "meet",
     "name": "ETITE Meet",
-    "does": "Multi-tenant video platform with recording, streaming and AI captions; powers telemedicine calls",
-    "owner": "ETITE / Ministry of Health",
+    "does": "Multi-tenant video platform with recording, live streaming and an embed SDK",
+    "owner": "ETITE",
     "url": "https://meet.etite.tech",
     "caseStudy": "meet"
   },

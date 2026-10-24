@@ -54,7 +54,7 @@ export const caseStudies: CaseStudy[] = [
     title: 'eBanguka, Rwanda’s national emergency medical services system',
     summary:
       'One system for emergency calls, ambulance dispatch, crews and hospitals, running countrywide and supporting hundreds of healthcare providers.',
-    role: 'Software engineer in a team of three. I created the API and web codebases and wrote about 60% of the code across 860+ merged pull requests.',
+    role: 'Software engineer in a team of three, working across the API, the web application and the data model.',
     period: 'Jul 2025 – present',
     context:
       'Emergency care depends on minutes. Call-centre staff, dispatchers, ambulance crews and receiving hospitals need the same picture of every case, and national reporting has to be trustworthy.',
@@ -64,15 +64,16 @@ export const caseStudies: CaseStudy[] = [
       'Clinical patient-care records and national reporting.',
       'Facility-scoped access control from a generated permission matrix, with patient-data masking.',
       'Partner integrations: insurance eligibility, national ID lookup and the health information exchange.',
+      'Bulk national exports moved off the API to a database-backed job queue with a dedicated worker that streams files to object storage.',
       'A data-integrity programme on response-time data: about 25 targeted fixes, an anomaly detector and repair scripts that record the source of every correction.',
     ],
     results: [
-      {
-        value: '36–51 s → 21 s',
-        label: 'Full 214-column national export, moved to a PostgreSQL job queue with a dedicated worker',
-      },
-      { value: '~60%', label: 'Of the code, across 860+ merged pull requests' },
       { value: 'Nationwide', label: 'In production, supporting hundreds of healthcare providers' },
+      {
+        value: 'Real time',
+        label: 'Dispatch, crews and hospitals share the same live picture of every case',
+      },
+      { value: 'Role-based', label: 'Facility-scoped access control with patient-data masking' },
     ],
     stack: [
       'NestJS',
@@ -89,38 +90,26 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: 'meet',
-    title: 'ETITE Meet, a video platform with AI captions and summaries',
+    title: 'ETITE Meet, a multi-tenant video platform',
     summary:
-      'A multi-tenant video consultation platform on LiveKit, with an embed SDK on npm. It powers telemedicine video calls for Rwanda Virtual Hospital.',
-    role: 'Designed and built the platform: API, consumer backend, two web apps, AI service and deployment.',
+      'A multi-tenant video platform on LiveKit that other products embed with a small SDK published on npm.',
+    role: 'Designed and built the platform: API, consumer backend, two web apps, embed SDK and deployment.',
     period: 'Feb 2026 – present',
     context:
-      'Telemedicine needs video that partner health systems can embed safely, that records reliably and that runs on modest servers. Captions and summaries have to work in Kinyarwanda.',
+      'Products need video calls they can embed safely, that record reliably and that run on modest servers, without each team rebuilding the same infrastructure.',
     built: [
       'A multi-tenant API on LiveKit: rooms, recording, live streaming and HMAC-signed webhooks.',
       'A versioned OpenAPI contract with CI drift checks, and an embed SDK published on npm.',
-      'An AI service for live captions, consultation summaries and a voice assistant with Kinyarwanda support, now in pilot validation.',
-      'Benchmark-driven model choice: the configured speech model would have missed the 20-minute processing target, so I switched to one that transcribes an hour of audio in about 6.5 minutes on CPU.',
-      'A load test and capacity model for the telemedicine pilot, with server sizing for 100 to 500 concurrent patients.',
+      'Webhook delivery with replay protection and an idempotent event ledger, so integrators never miss or double-process an event.',
+      'A consumer backend with its own identity, organisations and mail, talking to the platform only through its public API.',
+      'One deployment bundle that runs the same images in several environments.',
     ],
     results: [
-      {
-        value: '1.49 vCPU',
-        label: 'For 60 concurrent one-to-one video consultations, with 0.01% packet loss',
-      },
-      { value: '~6.5 min', label: 'To transcribe an hour of audio on CPU' },
       { value: '~2 KB', label: 'Embed SDK with no dependencies' },
+      { value: 'Versioned', label: 'OpenAPI contract with CI checks that catch drift' },
+      { value: 'Signed', label: 'Webhooks with replay protection and an idempotent ledger' },
     ],
-    stack: [
-      'NestJS 11',
-      'Prisma 7',
-      'BullMQ',
-      'LiveKit',
-      'Next.js 16',
-      'Python / FastAPI',
-      'Whisper',
-      'Docker',
-    ],
+    stack: ['NestJS 11', 'Prisma 7', 'BullMQ', 'LiveKit', 'Next.js 16', 'Docker'],
     links: [
       { label: 'meet.etite.tech', url: 'https://meet.etite.tech' },
       { label: '@etiteltd/meet-embed on npm', url: 'https://www.npmjs.com/package/@etiteltd/meet-embed' },
@@ -132,7 +121,7 @@ export const caseStudies: CaseStudy[] = [
     title: 'Telehealth and Ministry of Health systems',
     summary:
       'Clinical workflows for the National Telehealth Platform, plus the architecture behind the Ministry’s tracking and events systems.',
-    role: 'Software engineer in a team of three, after my ETITE team won the Ministry’s 2024 telehealth hackathon.',
+    role: 'Software engineer in a team of three.',
     period: 'Feb 2025 – present',
     context:
       'Remote consultations widen access to care across the country, and the Ministry’s own operations need systems that several organisations can share safely.',
@@ -159,7 +148,7 @@ export const caseStudies: CaseStudy[] = [
     title: 'ETITE products and infrastructure',
     summary:
       'Single sign-on, a multi-tenant ERP, team chat and the production fleet they run on, plus client systems delivered with my team of five.',
-    role: 'Lead Engineer at ETITE Ltd, full-time until January 2025 and part-time (evenings and weekends) since.',
+    role: 'Lead Engineer at ETITE Ltd, leading a team of five developers.',
     period: 'Oct 2020 – present',
     context:
       'A small company shipping many products needs one identity, shared infrastructure and evidence that backups and security actually work.',
@@ -201,7 +190,7 @@ export const experience = [
     period: 'Aug 2024',
     title: 'Overall winner, Telehealth Digital Tool Development Hackathon',
     org: 'Ministry of Health and RBC, with UNFPA and HDI',
-    note: 'Won $8,000 with a team of three. The win led to my role at the Ministry.',
+    note: 'Overall winner with a team of three.',
   },
   {
     period: 'Dec 2022 – Oct 2023',
@@ -257,7 +246,7 @@ export const awards = [
   },
   {
     year: '2024',
-    title: 'Overall Winner ($8,000), Telehealth Digital Tool Development Hackathon',
+    title: 'Overall Winner, Telehealth Digital Tool Development Hackathon',
     org: 'Ministry of Health and RBC, with UNFPA and HDI',
   },
   {

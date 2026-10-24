@@ -33,10 +33,7 @@ function Work() {
   return (
     <section className="py-20">
       <Container>
-        <SectionTitle
-          id="work"
-          lead="Four bodies of work, each with what I built and what it measurably changed."
-        >
+        <SectionTitle id="work" lead="Four bodies of work, and what I built in each.">
           Selected work
         </SectionTitle>
 
