@@ -1,5 +1,38 @@
 {
+  "name": "jeanbosco.tech",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal website of Jean Bosco Mugiraneza, software engineer.",
+  "license": "UNLICENSED",
+  "type": "module",
+  "packageManager": "pnpm@11.21.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "status": "node scripts/check-status.mjs",
+    "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "test:e2e": "playwright test"
+  },
   "dependencies": {
-    "froala-editor": "^4.0.17"
+    "next": "^16.4.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@biomejs/biome": "^2.6.2",
+    "@playwright/test": "^1.64.1",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "serve": "^14.2.6",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3"
   }
 }

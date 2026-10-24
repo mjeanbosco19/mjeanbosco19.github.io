@@ -1,0 +1,51 @@
+[
+  {
+    "id": "ebanguka",
+    "name": "eBanguka",
+    "does": "National emergency medical services: call intake, ambulance dispatch, crews, patient-care records",
+    "owner": "Ministry of Health",
+    "url": "https://ebanguka.moh.gov.rw",
+    "caseStudy": "ebanguka"
+  },
+  {
+    "id": "telehealth",
+    "name": "National Telehealth Platform",
+    "does": "Remote consultations, prescriptions and statistics dashboards for providers countrywide",
+    "owner": "Ministry of Health",
+    "url": "https://telehealth.moh.gov.rw",
+    "caseStudy": "telehealth"
+  },
+  {
+    "id": "meet",
+    "name": "ETITE Meet",
+    "does": "Multi-tenant video platform with recording, streaming and AI captions; powers telemedicine calls",
+    "owner": "ETITE / Ministry of Health",
+    "url": "https://meet.etite.tech",
+    "caseStudy": "meet"
+  },
+  {
+    "id": "meet-embed",
+    "name": "@etiteltd/meet-embed",
+    "does": "A ~2 KB SDK that embeds a Meet call in any web app",
+    "owner": "npm package",
+    "url": "https://www.npmjs.com/package/@etiteltd/meet-embed",
+    "checkUrl": "https://registry.npmjs.org/@etiteltd%2fmeet-embed",
+    "caseStudy": "meet"
+  },
+  {
+    "id": "events",
+    "name": "MoH Events",
+    "does": "Event management for the Ministry, with QR-coded badges and invitations",
+    "owner": "Ministry of Health",
+    "url": "https://events.moh.gov.rw",
+    "caseStudy": "telehealth"
+  },
+  {
+    "id": "devportal",
+    "name": "ETITE Developer Portal",
+    "does": "Public integration guides and API references behind single sign-on",
+    "owner": "ETITE",
+    "url": "https://developers.etite.tech",
+    "caseStudy": "platform"
+  }
+]

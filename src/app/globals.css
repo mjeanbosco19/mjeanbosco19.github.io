@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --color-night: #07161c;
+  --color-panel: #0c232b;
+  --color-rule: #1d3d47;
+  --color-ink: #e7f1f3;
+  --color-muted: #8da8af;
+  --color-beacon: #f4b740;
+  --color-live: #4ade80;
+  --color-badge: #f2f5f5;
+  --color-badge-ink: #0b2a33;
+
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+}
+
+@layer base {
+  html {
+    background: var(--color-night);
+    color: var(--color-ink);
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    font-feature-settings: "tnum" 0;
+  }
+
+  ::selection {
+    background: var(--color-beacon);
+    color: var(--color-night);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-beacon);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer components {
+  /* Signage type: Archivo at its widest, for the name and section titles. */
+  .signage {
+    font-stretch: 125%;
+    font-variation-settings: "wdth" 125;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+
+  .link {
+    color: var(--color-ink);
+    text-decoration: underline;
+    text-decoration-color: var(--color-rule);
+    text-underline-offset: 0.25em;
+    text-decoration-thickness: 1px;
+    transition: text-decoration-color 150ms;
+  }
+  .link:hover {
+    text-decoration-color: var(--color-beacon);
+  }
+
+  /* Status light: comes on once at load, row by row (see StatusBoard). */
+  .status-light {
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 9999px;
+    background: var(--color-live);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-live) 18%, transparent);
+    animation: light-on 500ms ease-out both;
+    animation-delay: calc(var(--row, 0) * 140ms + 250ms);
+  }
+  .status-light[data-ok="false"] {
+    background: var(--color-muted);
+    box-shadow: none;
+  }
+
+  @keyframes light-on {
+    from {
+      opacity: 0.15;
+      box-shadow: 0 0 0 0 transparent;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .status-light {
+      animation: none;
+    }
+  }
+}

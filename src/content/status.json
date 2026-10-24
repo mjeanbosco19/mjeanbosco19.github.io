@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-24T13:09:38.564Z",
+  "results": {
+    "ebanguka": {
+      "status": 200,
+      "ok": true
+    },
+    "telehealth": {
+      "status": 200,
+      "ok": true
+    },
+    "meet": {
+      "status": 200,
+      "ok": true
+    },
+    "meet-embed": {
+      "status": 200,
+      "ok": true,
+      "version": "0.1.1"
+    },
+    "events": {
+      "status": 200,
+      "ok": true
+    },
+    "devportal": {
+      "status": 200,
+      "ok": true
+    }
+  }
+}
