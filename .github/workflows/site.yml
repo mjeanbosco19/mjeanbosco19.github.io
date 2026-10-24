@@ -38,10 +38,16 @@ jobs:
           pnpm test:e2e
       - name: Lighthouse budgets
         run: pnpm dlx @lhci/cli@0.15.x autorun
+      # Internal links are checked as files. Skipped hosts: the site's own canonical URLs, and
+      # hosts that block link checkers (the npm and eBanguka URLs are verified by `pnpm status`).
       - name: Check links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress --exclude 'linkedin\.com' --root-dir "$PWD/out" 'out/**/*.html'
+          args: >-
+            --no-progress --root-dir "$PWD/out"
+            --exclude '^https://jeanbosco\.tech' --exclude 'linkedin\.com'
+            --exclude 'npmjs\.com' --exclude 'ebanguka\.moh\.gov\.rw'
+            'out/**/*.html'
           fail: true
       - uses: actions/upload-pages-artifact@v3
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
