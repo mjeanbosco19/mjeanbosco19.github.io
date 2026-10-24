@@ -16,7 +16,6 @@ function IdBadge() {
           <span className="text-xs font-medium">Kigali</span>
         </div>
         {/* Static export: plain responsive img, so phones fetch the 480 px file. */}
-        {/* biome-ignore lint/performance/noImgElement: next/image cannot emit srcset with unoptimized export */}
         <img
           src="/portrait-480.webp"
           srcSet="/portrait-480.webp 480w, /portrait-960.webp 960w"

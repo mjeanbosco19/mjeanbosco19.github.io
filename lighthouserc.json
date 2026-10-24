@@ -3,7 +3,7 @@
     "collect": {
       "staticDistDir": "./out",
       "url": ["/", "/work/ebanguka/"],
-      "numberOfRuns": 1
+      "numberOfRuns": 3
     },
     "assert": {
       "assertions": {
