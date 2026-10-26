@@ -8,7 +8,7 @@ export const person = {
   role: 'Software engineer',
   statement: 'I build the software behind Rwanda’s national emergency and telehealth services.',
   intro:
-    'Software Engineer at the Rwanda Ministry of Health’s National Health Intelligence Centre, seconded by UNFPA Rwanda. Before that, I was Lead Engineer at ETITE Ltd from 2020 to 2025. I work across the whole system: NestJS and PostgreSQL services, Next.js front ends, real-time video, identity and security, and the infrastructure underneath.',
+    'Software Engineer at the Rwanda Ministry of Health’s National Health Intelligence Centre, seconded by UNFPA Rwanda. Before that, I co-founded ETITE Ltd in 2020 and was its Lead Engineer until 2025. I work across the whole system: NestJS and PostgreSQL services, Next.js front ends, real-time video, identity and security, and the infrastructure underneath.',
   location: 'Kigali, Rwanda',
   email: 'jeanboscomugiraneza19@gmail.com',
   linkedin: 'https://www.linkedin.com/in/mjeanbosco19',
@@ -148,7 +148,7 @@ export const caseStudies: CaseStudy[] = [
     title: 'ETITE products and infrastructure',
     summary:
       'Single sign-on, a multi-tenant ERP, team chat and the production fleet they run on, plus client systems delivered with my team of five.',
-    role: 'Lead Engineer at ETITE Ltd, leading a team of five developers.',
+    role: 'Co-founded ETITE Ltd in 2020 and led its engineering team of five developers as Lead Engineer.',
     period: 'Oct 2020 – Feb 2025',
     context:
       'A small company shipping many products needs one identity, shared infrastructure and evidence that backups and security actually work.',
@@ -202,7 +202,7 @@ export const experience = [
     period: 'Oct 2020 – Feb 2025',
     title: 'Lead Engineer',
     org: 'ETITE Ltd',
-    note: 'Team leader of five developers.',
+    note: 'Co-founded ETITE Ltd in 2020 and led its engineering team of five developers.',
   },
 ] as const;
 
