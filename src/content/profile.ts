@@ -10,7 +10,7 @@ export const person = {
   intro:
     'Software Engineer at the Rwanda Ministry of Health’s National Health Intelligence Centre, seconded by UNFPA Rwanda. I co-founded ETITE Ltd in 2020. I work across the whole system: NestJS and PostgreSQL services, Next.js front ends, real-time video, identity and security, and the infrastructure underneath.',
   location: 'Kigali, Rwanda',
-  email: 'jeanboscomugiraneza19@gmail.com',
+  email: 'mjeanbosco19@gmail.com',
   linkedin: 'https://www.linkedin.com/in/mjeanbosco19',
   github: 'https://github.com/mjeanbosco19',
   site: 'https://jeanbosco.tech',
