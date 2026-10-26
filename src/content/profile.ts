@@ -8,7 +8,7 @@ export const person = {
   role: 'Software engineer',
   statement: 'I build the software behind Rwanda’s national emergency and telehealth services.',
   intro:
-    'Software Engineer at the Rwanda Ministry of Health’s National Health Intelligence Centre, seconded by UNFPA Rwanda. Before that, I co-founded ETITE Ltd in 2020 and was its Lead Engineer until 2025. I work across the whole system: NestJS and PostgreSQL services, Next.js front ends, real-time video, identity and security, and the infrastructure underneath.',
+    'Software Engineer at the Rwanda Ministry of Health’s National Health Intelligence Centre, seconded by UNFPA Rwanda. I co-founded ETITE Ltd in 2020. I work across the whole system: NestJS and PostgreSQL services, Next.js front ends, real-time video, identity and security, and the infrastructure underneath.',
   location: 'Kigali, Rwanda',
   email: 'jeanboscomugiraneza19@gmail.com',
   linkedin: 'https://www.linkedin.com/in/mjeanbosco19',
