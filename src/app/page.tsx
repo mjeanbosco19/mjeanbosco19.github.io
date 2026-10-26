@@ -20,10 +20,7 @@ const jsonLd = {
   url: person.site,
   image: `${person.site}/portrait-960.webp`,
   address: { '@type': 'PostalAddress', addressLocality: 'Kigali', addressCountry: 'RW' },
-  worksFor: [
-    { '@type': 'GovernmentOrganization', name: 'Rwanda Ministry of Health' },
-    { '@type': 'Organization', name: 'ETITE Ltd' },
-  ],
+  worksFor: { '@type': 'GovernmentOrganization', name: 'Rwanda Ministry of Health' },
   award: `${person.award.title}, ${person.award.org}`,
   sameAs: [person.linkedin, person.github],
 };
