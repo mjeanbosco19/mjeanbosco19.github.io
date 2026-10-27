@@ -29,6 +29,8 @@ export type System = {
   url: string;
   /** What the build-time status check fetches (defaults to url). */
   checkUrl?: string;
+  /** Blocks visitors outside Rwanda, so the check (run abroad) gets a 403 while it is up. */
+  rwandaOnly?: boolean;
   caseStudy?: string;
 };
 
@@ -86,7 +88,7 @@ export const caseStudies: CaseStudy[] = [
       'Docker',
       'GitHub Actions',
     ],
-    links: [{ label: 'ebanguka.moh.gov.rw', url: 'https://ebanguka.moh.gov.rw' }],
+    links: [{ label: 'ebanguka.moh.gov.rw (available in Rwanda only)', url: 'https://ebanguka.moh.gov.rw' }],
   },
   {
     slug: 'meet',

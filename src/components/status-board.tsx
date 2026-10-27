@@ -53,6 +53,9 @@ export function StatusBoard() {
             <tbody>
               {systems.map((s, i) => {
                 const r = results[s.id] ?? { status: 0, ok: false };
+                // A 403 from a Rwanda-only system means it answered and refused a foreign visitor.
+                const regionLocked = !r.ok && s.rwandaOnly === true && r.status === 403;
+                const live = r.ok || regionLocked;
                 return (
                   <tr key={s.id} className="border-t border-rule/70 align-top">
                     <th scope="row" className="px-5 py-4 font-normal sm:px-6">
@@ -79,16 +82,22 @@ export function StatusBoard() {
                       <div className="flex items-center justify-end gap-2.5">
                         <span
                           className="status-light shrink-0"
-                          data-ok={r.ok}
+                          data-ok={live}
                           style={{ '--row': i } as React.CSSProperties}
                           aria-hidden="true"
                         />
                         <span className="text-[0.95rem] font-medium text-ink">
-                          {r.ok ? 'Live' : 'Not checked'}
+                          {live ? 'Live' : 'Not checked'}
                         </span>
                       </div>
                       <p className="mt-1 text-right font-mono text-xs whitespace-nowrap text-muted">
-                        {r.version ? `v${r.version}` : r.status ? `HTTP ${r.status}` : 'no response'}
+                        {regionLocked
+                          ? 'Rwanda only'
+                          : r.version
+                            ? `v${r.version}`
+                            : r.status
+                              ? `HTTP ${r.status}`
+                              : 'no response'}
                       </p>
                     </td>
                   </tr>

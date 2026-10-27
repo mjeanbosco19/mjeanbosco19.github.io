@@ -2,8 +2,8 @@
   "checkedAt": "2026-10-24T13:09:38.564Z",
   "results": {
     "ebanguka": {
-      "status": 200,
-      "ok": true
+      "status": 403,
+      "ok": false
     },
     "telehealth": {
       "status": 200,

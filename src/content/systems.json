@@ -5,6 +5,7 @@
     "does": "National emergency medical services: call intake, ambulance dispatch, crews, patient-care records",
     "owner": "Ministry of Health",
     "url": "https://ebanguka.moh.gov.rw",
+    "rwandaOnly": true,
     "caseStudy": "ebanguka"
   },
   {
