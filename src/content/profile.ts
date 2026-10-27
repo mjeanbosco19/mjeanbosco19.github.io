@@ -150,17 +150,17 @@ export const caseStudies: CaseStudy[] = [
     title: 'ETITE products and infrastructure',
     summary:
       'Single sign-on, a multi-tenant ERP, team chat and the production fleet they run on, plus client systems delivered with my team of five.',
-    role: 'Co-founded ETITE Ltd in 2020 and led its engineering team of five developers as Lead Engineer.',
-    period: 'Oct 2020 – Feb 2025',
+    role: 'Co-founder. Lead Engineer from 2020 to 2025, leading a team of five developers; since then I build the company’s products in my free time, outside my Ministry role.',
+    period: 'Oct 2020 – present',
     context:
       'A small company shipping many products needs one identity, shared infrastructure and evidence that backups and security actually work.',
     built: [
-      'Single sign-on for 35 applications on Keycloak, with MFA by default, passkeys and step-up checks for admin areas.',
+      'As Lead Engineer (2020–2025), client systems delivered with my team of five: the RITCO management information system, Woodhabitat ERP, the OAZIS learning platform and an HR platform. I designed the UX in Figma, planned the work, tested every feature and ran client feedback.',
+      'In my free time (2026): single sign-on for 35 applications on Keycloak, with MFA by default, passkeys and step-up checks for admin areas.',
       'A multi-tenant ERP on ERPNext v16 with Rwanda tax and holiday localisation.',
       'A Matrix-based chat with a 2.9 KB embeddable widget and end-to-end encryption.',
       'A five-server Docker production fleet: Traefik edge, private registry, self-hosted CI runners, central logs and metrics, and encrypted off-site backups with restore drills.',
       'A security review of the multi-tenant workspace product that closed about 20 issues, and accessibility checks (WCAG 2.1 AA) in CI.',
-      'Client systems delivered with my team of five: the RITCO management information system, Woodhabitat ERP, the OAZIS learning platform and an HR platform. I designed the UX in Figma, planned the work, tested every feature and ran client feedback.',
     ],
     results: [
       { value: '24 /s at p95 73 ms', label: 'Sign-ins in load tests, covered by 837 automated checks' },
@@ -201,10 +201,16 @@ export const experience = [
     note: 'E-commerce features in a distributed agile team, with tests and CI.',
   },
   {
+    period: 'Oct 2020 – present',
+    title: 'Co-founder',
+    org: 'ETITE Ltd',
+    note: 'In my free time, outside my Ministry role, I built the company’s single sign-on, ERP, team chat and server fleet (2026).',
+  },
+  {
     period: 'Oct 2020 – Feb 2025',
     title: 'Lead Engineer',
     org: 'ETITE Ltd',
-    note: 'Co-founded ETITE Ltd in 2020 and led its engineering team of five developers.',
+    note: 'Led the engineering team of five developers.',
   },
 ] as const;
 
